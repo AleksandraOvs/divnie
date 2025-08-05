@@ -1,0 +1,100 @@
+
+@font-face {
+  font-family: "Oswald";
+  font-weight:300;
+  src: local("Oswald"), 
+  url(fonts/Oswald-Light.ttf) format("truetype"),
+  url(fonts/Oswald-Light.woff) format("woff"), 
+  url(fonts/Oswald-Light.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Oswald";
+  font-weight:400;
+  src: local("Oswald"), 
+  url(fonts/Oswald-Regular.ttf) format("truetype"),
+  url(fonts/Oswald-Regular.woff) format("woff"), 
+  url(fonts/Oswald-Regular.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Oswald";
+  font-weight:500;
+  src: local("Oswald"), 
+  url(fonts/Oswald-Medium.ttf) format("truetype"),
+  url(fonts/Oswald-Medium.woff) format("woff"), 
+  url(fonts/Oswald-Medium.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Oswald";
+  font-weight:600;
+  src: local("Oswald"), 
+  url(fonts/Oswald-SemiBold.ttf) format("truetype"),
+  url(fonts/Oswald-SemiBold.woff) format("woff"), 
+  url(fonts/Oswald-SemiBold.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Oswald";
+  font-weight:700;
+  src: local("Oswald"), 
+  url(fonts/Oswald-Bold.ttf) format("truetype"),
+  url(fonts/Oswald-Bold.woff) format("woff"), 
+  url(fonts/Oswald-Bold.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight:300;
+  src: local("Open Sans"), 
+  url(fonts/OpenSans-Light.ttf) format("truetype"),
+  url(fonts/OpenSans-Light.woff) format("woff"), 
+  url(fonts/OpenSans-Light.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight:400;
+  src: local("Open Sans"), 
+  url(fonts/OpenSans-Regular.ttf) format("truetype"),
+  url(fonts/OpenSans-Regular.woff) format("woff"), 
+  url(fonts/OpenSans-Regular.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight:500;
+  src: local("Open Sans"), 
+  url(fonts/OpenSans-Medium.ttf) format("truetype"),
+  url(fonts/OpenSans-Medium.woff) format("woff"), 
+  url(fonts/OpenSans-Medium.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight:600;
+  src: local("Open Sans"), 
+  url(fonts/OpenSans-SemiBold.ttf) format("truetype"),
+  url(fonts/OpenSans-SemiBold.woff) format("woff"), 
+  url(fonts/OpenSans-SemiBold.woff2) format("woff2");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight:700;
+  src: local("Open Sans"), 
+  url(fonts/OpenSans-Bold.ttf) format("truetype"),
+  url(fonts/OpenSans-Bold.woff) format("woff"), 
+  url(fonts/OpenSans-Bold.woff2) format("woff2");
+  font-display: swap;
+} 
