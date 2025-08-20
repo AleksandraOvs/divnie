@@ -174,8 +174,8 @@ function untheme_scripts()
 	wp_enqueue_script('jquery_scripts', get_template_directory_uri() . '/js/jquery-3.7.1.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('untheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	wp_enqueue_script('js-accordion-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', array(), null, true);
-	wp_enqueue_script('fancy_scripts', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('swiper_scripts', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('fancy_scripts', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('untheme_scripts', get_template_directory_uri() . '/js/scripts.js', array(), _S_VERSION, true);
 	wp_enqueue_script('untheme_slider_scripts', get_template_directory_uri() . '/js/slider-scripts.js', array(), _S_VERSION, true);
 	//wp_enqueue_script('untheme_masonry_scripts', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js">', array(), _S_VERSION, true);

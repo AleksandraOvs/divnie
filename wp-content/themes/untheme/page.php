@@ -53,9 +53,7 @@ get_header();
 		</div>
 
 	</section>
-	<?php get_template_part('template-parts/color-chart') ?>
-	<?php get_template_part('template-parts/stages-of-work'); ?>
-<?php get_template_part('template-parts/front-blocks/05form-block'); ?>
+	
 </main><!-- #main -->
 
 <?php

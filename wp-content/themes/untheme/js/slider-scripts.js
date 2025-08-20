@@ -13,55 +13,20 @@ new Swiper('.hero-slider', {
   // },
 });
 
-const portfolioSwiper = new Swiper('.projects-slider', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-	//centeredSlides: true,
-  loop: true,
-  //loop: true,
-  //effect: 'fade',
-  grabCursor: true,
-  // navigation: {
-  // nextEl: '.portfolio-slider__button-next',
-  // prevEl: '.portfolio-slider__button-prev',
-  // lockClass: 'hide-navi'
-  //  },
-  navigation: {
-    nextEl: '.slider-projects-next',
-    prevEl: '.slider-projects-prev',
-  },
-  // breakpoints: {
-  //   1200: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 0,
-	// 	centeredSlides: false
-  //   },
-  //   768: {
-  //     slidesPerView: 3,
-	// centeredSlides: true,
-  //     spaceBetween: 0,
-  //     loop: false,
-      
-  //   },
-  //   576: {
-  //     spaceBetween: 0,
-  //     slidesPerView: 3,
-  //   }
-  // }
-
-});
-
 const swiperTestim = new Swiper('.testimonials-slider', {
   slidesPerView: 3,
-  spaceBetween: 40,
+  spaceBetween: 20,
   navigation: {
     nextEl: '.slider-testim-next',
     prevEl: '.slider-testim-prev',
   },
+  breakpoints:{
+    992:{
+      spaceBetween: 40,
+    }
+  }
   //loop: true,
 });
-
-
 
 const projectSwiper = new Swiper('.project-slider', {
   slidesPerView: 1,
@@ -70,4 +35,22 @@ const projectSwiper = new Swiper('.project-slider', {
   //   prevEl: '.slider-testim-prev',
   // },
   loop: true,
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('.project-swiper');
+    sliders.forEach(function(sliderEl){
+        new Swiper(sliderEl, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: sliderEl.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+        });
+    });
+
+    // Fancybox — автоматически инициализируется по data-fancybox
+    //Fancybox.bind("[data-fancybox]", {});
 });

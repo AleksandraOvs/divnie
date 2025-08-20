@@ -1,0 +1,16 @@
+{
+  "apiVersion": 2,
+  "name": "custom/swiper-slide",
+  "title": "Swiper Slide",
+  "category": "widgets",
+  "parent": [
+    "custom/swiper-block"
+  ],
+  "icon": "slides",
+  "description": "Один слайд в Swiper",
+  "supports": {
+    "inserter": true,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}
