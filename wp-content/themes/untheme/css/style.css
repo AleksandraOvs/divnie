@@ -2107,7 +2107,7 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
     content: '';
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .5);
     display: flex;
     position: absolute;
     top: 0;
