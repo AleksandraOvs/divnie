@@ -221,7 +221,7 @@ require 'inc/post-types.php';
 
 require 'inc/load-more.php';
 
-require 'inc/color-palette.php';
+//require 'inc/color-palette.php';
 
 /**
  * Initialization Post Types
