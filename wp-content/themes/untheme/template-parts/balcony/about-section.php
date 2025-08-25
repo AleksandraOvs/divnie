@@ -15,13 +15,13 @@
         <?php
         $items = carbon_get_theme_option('crb_balcony_about_items');
         if ( ! empty($items) ) : ?>
-            <div class="about-items">
+            <div class="about-items ">
                 <?php foreach ( $items as $item ) :
                     $img_id = $item['crb_balcony_about_img'];
                     $img_url = wp_get_attachment_image_url( $img_id, 'full' );
                     $text    = $item['crb_balcony_about_text'];
                     ?>
-                    <div class="about-item">
+                    <div class="about-item fromBottom">
                         <?php if ( $img_url ) : ?>
                             <div class="about-item__image">
                                 <img src="<?php echo esc_url( $img_url ); ?>" alt="">
@@ -30,7 +30,7 @@
 
                         <?php if ( $text ) : ?>
                             <div class="about-item__text">
-                                <?php echo esc_html( $text ); ?>
+                                <?php echo $text ?>
                             </div>
                         <?php endif; ?>
                     </div>

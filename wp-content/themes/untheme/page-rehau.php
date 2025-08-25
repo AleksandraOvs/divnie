@@ -81,7 +81,7 @@ get_header();
                 </div>
             </section>
 
-            <?php get_template_part('template-parts/advantages') ?>
+            <?php get_template_part('template-parts/rehau/rehau-advantages') ?>
 
             <?php get_template_part('template-parts/front-blocks/03banner'); ?>
 

@@ -620,7 +620,6 @@ section.section-nums {
 /*ABOUT*/
 
 section.section-about {
-    padding-bottom: 0;
     background-color: var(--light-grey);
     position: relative;
     overflow: hidden;
@@ -893,6 +892,7 @@ section.section-about img.section-background {
 .reviews-slider {
     background: var(--accent-gradient);
     position: relative;
+    overflow-x: hidden;
 }
 
 .reviews-slider img {
@@ -2348,8 +2348,9 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
 /*ADVANTAGES*/
 
 .adv-section {
-    background: var(--light-grey);
+    background-color: #fff;
 }
+
 
 .advantages-list {
     display: flex;
@@ -2358,9 +2359,15 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
     align-items: stretch;
 }
 
-.advantage-icon img {
+.advantage-icon {
     width: 80px;
     height: 80px;
+}
+
+.advantage-icon img,
+.advantage-icon svg {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     object-position: center;
 }
@@ -2370,14 +2377,8 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
     background: var(--accent);
     padding: 20px;
     border-radius: 3px;
-}
-
-.advantage-item {
-    width: calc(100% / 3 - 30px);
-    background: var(--accent);
-    padding: 20px;
-    border-radius: 3px;
     display: flex;
+    gap: 10px;
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -2387,12 +2388,13 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
 .advantage-item h3 {
     font-weight: 300;
     color: #fff;
+    margin-bottom: 0;
+    font-size: 24px;
 }
 
 /*TYPES*/
 
 .wood-types-section {
-    padding-top: 0;
     background: var(--light-grey);
 }
 
@@ -2583,91 +2585,132 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
 }
 
 .accent-text {
-  padding: 20px;
-  width: 100%;
-  background: rgba(var(--dark-rgb), .85);
-  margin-top: 30px;
-  border-radius: 3px;
-  color: #fff;
-  line-height: 140%;
+    padding: 20px;
+    width: 100%;
+    background: rgba(var(--dark-rgb), .85);
+    margin-top: 30px;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 140%;
 }
 
 .accent-text::first-letter {
-  color: var(--blue);
-  font-size: 32px;
-  font-family: 'Oswald';
-  margin-right:3px;
+    color: var(--blue);
+    font-size: 32px;
+    font-family: 'Oswald';
+    margin-right: 3px;
 }
 
 /*BALCONY*/
 
 .product-cards._balcony_cards {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 }
 
 .product-card.product-balcony {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.product-card.product-balcony .product-card__image{
+.product-card.product-balcony .product-card__image {
     height: 100%;
 }
 
 .product-card.product-balcony {
-  padding: 0;
-  background: transparent;
+    padding: 0;
+    background: transparent;
 }
 
-.product-card.product-balcony .product-card__content{
+.product-card.product-balcony .product-card__content {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 20px;
 }
 
 .product-card.product-balcony .product-card__content .product-card__info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: none;
-  padding:0;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: none;
+    padding: 0;
+    align-items: flex-start;
 }
 
-.product-card.product-balcony .product-card__content .product-card__info h3{
+.product-card.product-balcony .product-card__content .product-card__info h3 {
     color: var(--black);
 }
 
-.product-card.product-balcony .product-card__content .product-advantages{
+.product-card.product-balcony .product-card__content .product-advantages {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 10px;
 }
 
 .product-card.product-balcony .product-card__content .product-advantages li {
-  padding: 0 0 10px 0;
+    padding: 0 0 10px 0;
 }
 
 .product-price {
-  font-family: 'Oswald';
-  font-size: 24px;
+    font-family: 'Oswald';
+    font-size: 24px;
 }
 
-.product-card.product-balcony .product-card__content .product-price{
+.product-card.product-balcony .product-card__content .product-price {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 
-.product-card.product-balcony .product-card__content .product-price p{
+.product-card.product-balcony .product-card__content .product-price p {
     font-family: 'Oswald';
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .product-card.product-balcony .product-card__content .product-price a {
-  width: max-content;
-  margin: 0;
+    width: max-content;
+    margin: 0;
+}
+
+.about-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.about-item__image {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.about-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-item__text {
+    background: rgba(255, 255, 255, .75);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border-radius: 3px;
+    color: var(--black);
+    width: 90%;
+    margin: -20% auto 0;
+    transition: all .5s linear;
+    height: 330px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+}
+
+.about-item__text h3 {
+    margin-bottom: 0;
 }
 
 
@@ -3241,7 +3284,7 @@ figure.wp-block-image {
         padding: 40px 15px;
         flex-direction: column;
         gap: 20px;
-        justify-content: space-around;
+        justify-content: flex-end;
     }
 
     nav.header-nav .fixed-container ul {
@@ -3254,10 +3297,11 @@ figure.wp-block-image {
         padding: 0;
         font-size: 18px;
         width: 100%;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 2;
         display: block;
         text-decoration: none;
+        text-align: left;
     }
 
     .header-nav .fixed-container .contacts-list li.contacts-list__item:not(:last-child)::after {
@@ -3299,7 +3343,6 @@ figure.wp-block-image {
     .header-nav .fixed-container .contacts-list li.contacts-list__item:not(:last-child) {
         padding-right: 0;
         position: relative;
-        padding-bottom: 20px;
     }
 
     .dropdown-menu {
@@ -3374,6 +3417,34 @@ figure.wp-block-image {
     .copyright {
         font-size: 12px;
     }
+
+    .about-items {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .about-item {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .about-item__text {
+        margin: 0;
+        margin-left: -100px;
+        justify-content: center;
+    }
+
+    .about-items .about-item:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    .about-items .about-item:nth-child(2n) .about-item__text {
+        margin-left: 0;
+        margin-right: -100px;
+    }
+
 
 }
 
@@ -3469,6 +3540,17 @@ figure.wp-block-image {
         margin-bottom: 30px;
     }
 
+    .product-card.product-balcony .product-card__image {
+        height: 250px;
+    }
+
+    .product-card.product-balcony {
+        align-items: flex-start;
+        padding-bottom: 40px;
+        border-bottom: 3px dotted var(--accent);
+        border-radius: 0;
+    }
+
     .why-list {
         flex-wrap: wrap;
     }
@@ -3500,8 +3582,12 @@ figure.wp-block-image {
         gap: 20px;
     }
 
+    .swiper-container.testimonials-slider {
+        overflow: visible;
+    }
+
     .product-cards {
-        gap: 20px;
+        gap: 40px;
     }
 
     .product-advantages li {
@@ -3520,7 +3606,7 @@ figure.wp-block-image {
 
     .product-advantages {
         width: 100%;
-        padding: 0 10px;
+        padding: 0;
     }
 
     .advantages-list {
@@ -3528,14 +3614,18 @@ figure.wp-block-image {
     }
 
     .advantage-item {
-        width: calc(100% / 3 - 20px);
+        width: calc(100% / 2 - 10px);
     }
 
     .advantage-item h3 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
-    .advantage-icon img {
+    .fixed-container .description {
+        width: 90%;
+    }
+
+    .advantage-icon {
         width: 40px;
         height: 40px;
     }
@@ -3603,9 +3693,9 @@ figure.wp-block-image {
         margin-top: 2vh;
     }
 
-    .fixed-container>h2.title {
+    /* .fixed-container>h2.title {
         width: 60%;
-    }
+    } */
 
     .hero-slide-content .fixed-container {
         flex-direction: column;
@@ -3712,9 +3802,57 @@ figure.wp-block-image {
         opacity: 1;
     }
 
+    .page-header._template-header .fixed-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .summary_adv .fixed-container {
+        width: 90%;
+    }
+
+    .product-card__image {
+        height: 320px;
+    }
+
     .faq-section__inner {
         flex-direction: column;
     }
+
+    .type-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .type-item__content__about__price {
+        justify-content: space-between;
+    }
+
+    .type-item__content__about__price {
+        margin-top: 20px;
+    }
+
+    .type-item__content__about {
+        width: calc(100% - 200px);
+    }
+
+    .product-card.product-balcony {
+        flex-direction: column;
+    }
+
+    .about-item__text {
+        margin: 0;
+        margin-left: 0px;
+        margin-left: -40%;
+        justify-content: center;
+    }
+
+    .about-items .about-item:nth-child(2n) .about-item__text {
+        margin-left: 0;
+        margin-right: -40%;
+    }
+
+
 
     .faq-section__inner__questions {
         width: 100%;
@@ -3759,6 +3897,19 @@ figure.wp-block-image {
         text-align: center;
     }
 
+    /* .about-item__text {
+        margin: 0;
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .about-items .about-item:nth-child(2n) .about-item__text {
+        margin-right: 0;
+    } */
+
+
+
+
     #form-popup {
         width: auto;
         padding: 20px;
@@ -3795,6 +3946,30 @@ figure.wp-block-image {
         font-size: 22px;
     }
 
+    .advantages-list {
+        gap: 4px;
+    }
+
+    .advantage-item {
+        width: calc(100% / 2 - 2.5px);
+    }
+
+    /* .projects-grid {
+        flex-direction: column;
+    }
+
+    .project-item {
+        width: 80%;
+        height: 350px;
+    } */
+
+
+    .project-item {
+        width: calc(100% / 3);
+        height: 350px;
+        flex-grow: 1;
+    }
+
     li.archive-list__item {
         position: relative;
         background: #fff;
@@ -3808,12 +3983,24 @@ figure.wp-block-image {
         row-gap: 10px;
     }
 
-
     .site-footer__right .contacts-list {
         justify-content: center;
         flex-direction: column;
         text-align: center;
     }
+
+    .product-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .product-cards._balcony_cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
 
     footer.site-footer .fixed-container ul li img {
         display: none;
@@ -3839,6 +4026,44 @@ figure.wp-block-image {
     .site-footer__right .contacts-list .contacts-list__item .contact-content {
         width: 100%;
     }
+
+    .about-item {
+        flex-direction: column;
+    }
+
+    .about-item {
+        gap: 0;
+    }
+
+    .about-item__text {
+        margin-left: 0;
+        margin-top: -100px;
+    }
+
+    .about-item__image {
+        width: 100%;
+    }
+
+    .about-items .about-item:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    .about-items .about-item:nth-child(2n) .about-item__text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .advantages-list .advantage-item:nth-child(3n) {
+        width: 100%;
+    }
+
+    .section-banner .fixed-container {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        margin: 0 auto;
+    }
+
 
     footer.site-footer .fixed-container ul li p,
     footer.site-footer .fixed-container ul li span,
@@ -3902,6 +4127,10 @@ figure.wp-block-image {
         width: 100%;
     }
 
+    .review-card {
+        overflow: scroll;
+    }
+
     .section-form__inner .feedback-form div form .form-inner {
         width: 100%;
     }
@@ -3925,6 +4154,10 @@ figure.wp-block-image {
     .page-header {
         padding-top: 120px;
         padding-bottom: 30px;
+    }
+
+    .advantage-item {
+        width: 100%;
     }
 }
 

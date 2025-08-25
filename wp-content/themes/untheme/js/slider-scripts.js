@@ -14,7 +14,7 @@ new Swiper('.hero-slider', {
 });
 
 const swiperTestim = new Swiper('.testimonials-slider', {
-  slidesPerView: 3,
+  slidesPerView: 1.2,
   spaceBetween: 20,
   navigation: {
     nextEl: '.slider-testim-next',
@@ -22,7 +22,12 @@ const swiperTestim = new Swiper('.testimonials-slider', {
   },
   breakpoints:{
     992:{
+      slidesPerView: 3,
       spaceBetween: 40,
+    },
+
+    576:{
+      slidesPerView: 1.8,
     }
   }
   //loop: true,

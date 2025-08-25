@@ -24,7 +24,7 @@
 
 <?php get_template_part('template-parts/front-blocks/04projects'); ?>
 
-
+<?php get_template_part('template-parts/advantages'); ?>
 
 <?php //get_template_part('template-parts/front-blocks/0services'); ?>
 <?php //get_template_part('template-parts/front-blocks/03why-block'); ?>

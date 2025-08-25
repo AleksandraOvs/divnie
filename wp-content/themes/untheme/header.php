@@ -50,12 +50,12 @@
 						<?php
 						endif;
 						?>
-				
+
 					</div>
 
 					<?php get_template_part('template-parts/contacts-block') ?>
 
-					<a href="#" class="menu-toggle">
+					<a href="#" class="menu-toggle" onclick="event.preventDefault();">
 						<div class="bar"></div>
 						<div class="bar"></div>
 						<div class="bar"></div>
@@ -77,7 +77,7 @@
 					<?php get_template_part('template-parts/contacts-block') ?>
 				</div>
 
-				
+
 			</nav>
 
 

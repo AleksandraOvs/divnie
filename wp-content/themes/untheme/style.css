@@ -108,7 +108,7 @@ body._fixed {
 	transition: all .5s linear;
 }
 
-body._fixed:after {
+/* body._fixed:after {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -116,9 +116,9 @@ body._fixed:after {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 10;
 	transition: all .5s linear;
-}
+} */
 
 /**
  * Render the `main` element consistently in IE.
@@ -914,7 +914,7 @@ ul.menu li .dropdown-menu li a:hover {
 header.site-header {
 	position: fixed;
 	width: 100%;
-	z-index: 500;
+	z-index: 9;
 }
 
 .header-main {
@@ -1037,7 +1037,7 @@ a.menu-toggle .bar {
 }
 
 a.menu-toggle.open .bar {
-	background: var(--green);
+	background: #fff;
 }
 
 a.menu-toggle.open .bar:nth-child(1) {

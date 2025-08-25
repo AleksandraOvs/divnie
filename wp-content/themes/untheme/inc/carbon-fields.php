@@ -186,7 +186,7 @@ function site_carbon()
                 ->set_types(array(
                     array(
                         'type'      => 'term',
-                        'taxonomy'  => 'gallery-cat', // твоя таксономия
+                        'taxonomy'  => 'gallery-cat',
                     ),
                 ))
                 ->set_help_text('Выберите категории галереи, которые должны отображаться в блоке'),
@@ -206,7 +206,7 @@ function site_carbon()
 
             /*advs */
 
-            Field::make('text', 'crb_wadv_block_head', 'Заголовок блока Преиуществ адеревянных окон'),
+            Field::make('text', 'crb_wadv_block_head', 'Заголовок блока Преиуществ деревянных окон'),
             Field::make('complex', 'crb_wadv', 'Преимущества дер.окон')
                 ->add_fields(array(
                     Field::make('image', 'crb_wadv_icon', 'Иконка')
@@ -317,6 +317,19 @@ function site_carbon()
                         ->set_width(33),
                 )),
 
+            //галерея проектов
+
+            Field::make('rich_text', 'crb_balcony_gallery_description', 'Описание блока Галереи проектов'),
+
+            Field::make('association', 'crb_balcony_gallery_categories', 'Категории для вывода')
+                ->set_types(array(
+                    array(
+                        'type'      => 'term',
+                        'taxonomy'  => 'gallery-cat',
+                    ),
+                ))
+                ->set_help_text('Выберите категории галереи, которые должны отображаться в блоке'),
+
         ));
 
     Container::make('theme_options', 'Stages of work')
@@ -333,6 +346,25 @@ function site_carbon()
                         ->set_width(30),
                     Field::make('rich_text', 'crb_stage_text', 'Text')
                         ->set_width(70),
+                ))
+        ));
+
+    Container::make('theme_options', 'Преимущества')
+
+        ->set_page_menu_position(4)
+        ->set_icon('dashicons-editor-ol')
+        ->add_fields(array(
+
+            Field::make('text', 'crb_advs_heading', 'Заголовок блока Преимуществ'),
+            Field::make('complex', 'crb_advs_list', 'Преимущества')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('image', 'crb_adv_icon', 'Иконка')
+                        ->set_width(33),
+                    Field::make('text', 'crb_adv_heading', 'Заголовок преимущества')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_adv_text', 'Описание пункта')
+                        ->set_width(33),
                 ))
         ));
 
