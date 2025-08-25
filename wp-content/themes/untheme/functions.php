@@ -220,6 +220,7 @@ require 'inc/walker.php';
 require 'inc/post-types.php';
 
 require 'inc/load-more.php';
+require 'inc/show-temp.php';
 
 //require 'inc/color-palette.php';
 
@@ -289,7 +290,3 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 // }
 // add_action('init', 'custom_services_rewrite_rules');
 
-function add_categories_to_pages() {
-    register_taxonomy_for_object_type('category', 'page');
-}
-add_action('init', 'add_categories_to_pages');
