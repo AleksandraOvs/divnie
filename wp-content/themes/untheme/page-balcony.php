@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Шаблон Деревянные окна
+ * Template name: Шаблон Балконы и лоджии
  */
 
 get_header();
@@ -28,18 +28,18 @@ get_header();
                     the_title('<h2 class="page-title">', '</h2>');
                     ?>
                     <?php
-                    if ($header_text = carbon_get_theme_option('crb_wheader_text')) {
+                    if ($header_text = carbon_get_theme_option('crb_balcony_header_text')) {
                         echo '<div class="template-header__text">' . $header_text . '</div>';
                     }
                     ?>
                 </div>
 
                 <?php
-                if ($header_accent = carbon_get_theme_option( 'crb_wheader_accent')) {
+                if ($header_accent = carbon_get_theme_option('crb_balcony_header_accent')) {
                     echo '<div class="template-header__accent">' . $header_accent;
 
-                    if ($header_accent_link = carbon_get_theme_option('crb_wheader_accent_link')) {
-                        $header_accent_link_text = carbon_get_theme_option('crb_wheader_accent_link_text');
+                    if ($header_accent_link = carbon_get_theme_option('crb_balcony_header_accent_link')) {
+                        $header_accent_link_text = carbon_get_theme_option('crb_balcony_header_accent_link_text');
                 ?>
                         <a class="btn" href="">
                             <?php
@@ -62,45 +62,30 @@ get_header();
 
         <div class="page-section__content">
             <?php
-            $summary_adv = carbon_get_theme_option('crb_wtemplate_description');
+            $summary_adv = carbon_get_theme_option('crb_balcony_template_description');
             if (!empty($summary_adv)) {
                 echo '<section class="summary_adv"><div class="fixed-container">';
                 echo $summary_adv;
                 echo '</div></section>';
             }
             ?>
-            
-            <?php get_template_part('template-parts/wooden/advantages-wood') ?>
-            <?php get_template_part('template-parts/wooden/types-wood') ?>
-
-            <hr>
-            тут форма обр. связи с телефоном/именем (заголовок задается отдельно в настройках шаблона в админке)
-            <hr>
-
-            <?php get_template_part('template-parts/wooden/types-windows') ?>
-
-            <?php get_template_part('template-parts/wooden/construction') ?>
-
-
-<!-- Продукция будет 7 блоком в чуть мод виде -->
-            <!-- <section class="template-products">
+            <section class="template-products">
                 <div class="fixed-container">
                     <?php
                     // Название секции
-                    //$section_name = carbon_get_post_meta(get_the_ID(), 'crb_name_section');
-                    //if (!empty($section_name)) : ?>
+                    $section_name = carbon_get_theme_option('crb_balcony_name_section');
+                    if (!empty($section_name)) : ?>
                         <h2 class="title"><?php echo esc_html($section_name); ?></h2>
-                    <?php //endif; ?>
-                    <?php //get_template_part('template-parts/content-product') ?>
+                    <?php endif; ?>
+                    <?php get_template_part('template-parts/balcony/content-balcony-products') ?>
                 </div>
-            </section> -->
-<!-- продукция конец -->
+            </section>
 
-            
+            <?php get_template_part('template-parts/balcony/about-section') ?>
 
-            <?php get_template_part('template-parts/front-blocks/03banner'); ?>
+            <?php //get_template_part('template-parts/front-blocks/03banner'); ?>
 
-            <?php get_template_part('template-parts/gallery'); ?>
+            <?php //get_template_part('template-parts/gallery'); ?>
 
             <?php
             $content = get_the_content();
@@ -113,15 +98,8 @@ get_header();
                 </section>
             <?php endif; ?>
 
-            <?php get_template_part('template-parts/front-blocks/04testimonials'); ?>
-
-
-
-
+            <?php //get_template_part('template-parts/front-blocks/04testimonials'); ?>
         </div>
-
-
-
     </div>
 
 </main><!-- #main -->

@@ -807,10 +807,12 @@ ul.menu li:not(:last-child) a {
 }
 
 ul.menu li a {
-	padding: 10px 20px;
+	padding: 10px 5px;
 	display: block;
 	text-decoration: none;
 	color: #fff;
+	text-align: center;
+	font-size: 14px;
 }
 
 ul.menu li a:hover {

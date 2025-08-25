@@ -125,6 +125,200 @@ function site_carbon()
                 ))
         ));
 
+    Container::make('theme_options', 'Шаблоны')
+
+        ->set_page_menu_position(4)
+        ->set_icon('dashicons-admin-comments')
+        ->add_tab(__('Шаблон Rehau'), array(
+
+            Field::make('rich_text', 'crb_header_text', 'Текст на первом экране')
+                ->set_width(100),
+
+            Field::make('rich_text', 'crb_header_accent', 'Акцентный текст на первом экране (например для акции)')
+                ->set_width(50),
+            Field::make('text', 'crb_header_accent_link', 'Ссылка для перехода')
+                ->set_width(25),
+            Field::make('text', 'crb_header_accent_link_text', 'Текст ссылки для перехода')
+                ->set_width(25),
+            Field::make('rich_text', 'crb_template_description', 'Текст основного преимущества'),
+
+
+            Field::make('text', 'crb_name_section', 'Название секции'),
+            Field::make('complex', 'crb_product', 'Продукция раздела')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('text', 'crb_product_name', 'Название продукции')
+                        ->set_width(50),
+                    Field::make('text', 'crb_product_price', 'Цена')
+                        ->set_width(50),
+                    Field::make('image', 'crb_product_image', 'Изображение продукции')
+                        ->set_width(33),
+
+                    Field::make('complex', 'crb_product_adv', 'Преимущества')
+                        ->add_fields(array(
+                            Field::make('image', 'crb_product_adv_icon', 'Изображение продукции')
+                                ->set_width(33),
+                            Field::make('text', 'crb_product_adv_key', 'Преимущество - ключ')
+                                ->set_width(33),
+                            Field::make('rich_text', 'crb_product_adv_value', 'Преимущество - значение')
+                                ->set_width(33),
+                        )),
+                    Field::make('text', 'crb_product_name_link', 'Ссылка для продукции')
+                        ->set_width(50),
+                    Field::make('text', 'crb_product_name_link_text', 'Текст ссылки для продукции')
+                        ->set_width(50),
+                )),
+
+            Field::make('text', 'crb_adv_block_head', 'Заголовок блока'),
+            Field::make('complex', 'crb_adv', 'Преимущества')
+                ->add_fields(array(
+                    Field::make('image', 'crb_adv_icon', 'Иконка')
+                        ->set_width(33),
+                    Field::make('text', 'crb_adv_head', 'Заголовок пункта')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_adv_desc', 'Текст преимущества')
+                        ->set_width(33),
+                )),
+
+            Field::make('rich_text', 'crb_gallery_description', 'Описание блока Галереи проектов'),
+
+            Field::make('association', 'crb_gallery_categories', 'Категории для вывода')
+                ->set_types(array(
+                    array(
+                        'type'      => 'term',
+                        'taxonomy'  => 'gallery-cat', // твоя таксономия
+                    ),
+                ))
+                ->set_help_text('Выберите категории галереи, которые должны отображаться в блоке'),
+        ))
+
+        ->add_tab(__('Деревянные окна'), array(
+            Field::make('rich_text', 'crb_wheader_text', 'Текст на первом экране')
+                ->set_width(100),
+
+            Field::make('rich_text', 'crb_wheader_accent', 'Акцентный текст на первом экране (например для акции)')
+                ->set_width(50),
+            Field::make('text', 'crb_wheader_accent_link', 'Ссылка для перехода')
+                ->set_width(25),
+            Field::make('text', 'crb_wheader_accent_link_text', 'Текст ссылки для перехода')
+                ->set_width(25),
+            Field::make('rich_text', 'crb_wtemplate_description', 'Текст основного преимущества'),
+
+            /*advs */
+
+            Field::make('text', 'crb_wadv_block_head', 'Заголовок блока Преиуществ адеревянных окон'),
+            Field::make('complex', 'crb_wadv', 'Преимущества дер.окон')
+                ->add_fields(array(
+                    Field::make('image', 'crb_wadv_icon', 'Иконка')
+                        ->set_width(33),
+                    Field::make('text', 'crb_wadv_head', 'Заголовок пункта')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_wadv_desc', 'Текст преимущества')
+                        ->set_width(33),
+                )),
+
+
+
+            Field::make('text', 'crb_types_head', 'Заголовок блока Типы профилей'),
+            Field::make('rich_text', 'crb_types_desc', 'Описание блока Типв профилей'),
+            Field::make('complex', 'crb_types', 'Виды профилей')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('image', 'crb_type_img', 'Изображение профиля')
+                        ->set_width(25),
+                    Field::make('text', 'crb_type_head', 'Название профиля')
+                        ->set_width(25),
+                    Field::make('rich_text', 'crb_type_desc', 'Описание профиля')
+                        ->set_width(50),
+                    Field::make('text', 'crb_type_price', 'Цена профиля')
+                        ->set_width(33),
+                    Field::make('text', 'crb_type_link', 'Ссылка')
+                        ->set_width(33),
+                    Field::make('text', 'crb_type_link_text', 'Текст ссылки')
+                        ->set_width(33),
+                )),
+
+            /*types of windows */
+
+            Field::make('text', 'crb_windows_types_head', 'Заголовок блока Типы окон'),
+            Field::make('rich_text', 'crb_windows_types_desc', 'Описание блока Типов окон'),
+            Field::make('complex', 'crb_windows_types', 'Виды окон')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('image', 'crb_window_type_img', 'Изображение вида окна')
+                        ->set_width(25),
+                    Field::make('text', 'crb_window_type_alt', 'Подпись к изображению ')
+                        ->set_width(25),
+                )),
+
+            /*construction */
+
+            Field::make('text', 'crb_construction_head', 'Заголовок блока Конструкция')->set_width(50),
+            Field::make('rich_text', 'crb_construction_desc', 'Описание блока Конструкция')->set_width(50),
+            Field::make('complex', 'crb_construction_items', 'Список')
+                ->add_fields(array(
+                    Field::make('image', 'crb_item_icon', 'Иконка')
+                        ->set_width(50),
+                    Field::make('text', 'crb_item_text', 'Текст')
+                        ->set_width(50),
+                )),
+            Field::make('rich_text', 'crb_icon_text_summary', 'Текст')
+        ))
+
+        ->add_tab(__('Балконы и лоджии'), array(
+            // Первый экран
+            Field::make('rich_text', 'crb_balcony_header_text', 'Текст на первом экране')
+                ->set_width(100),
+
+            Field::make('rich_text', 'crb_balcony_header_accent', 'Акцентный текст на первом экране (например для акции)')
+                ->set_width(50),
+            Field::make('text', 'crb_balcony_header_accent_link', 'Ссылка для перехода')
+                ->set_width(25),
+            Field::make('text', 'crb_balcony_header_accent_link_text', 'Текст ссылки для перехода')
+                ->set_width(25),
+            Field::make('rich_text', 'crb_balcony_template_description', 'Текст основного преимущества'),
+
+            Field::make('text', 'crb_balcony_name_section', 'Название секции Продукции'),
+            Field::make('complex', 'crb_balcony_products', 'Продукция раздела')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('text', 'crb_balcony_product_name', 'Название продукции')
+                        ->set_width(50),
+                    Field::make('rich_text', 'crb_balcony_product_desc', 'Описание продукции')
+                        ->set_width(50),
+                    Field::make('image', 'crb_balcony_product_image', 'Изображение продукции')
+                        ->set_width(33),
+                    Field::make('text', 'crb_balcony_product_price', 'Цена')
+                        ->set_width(50),
+
+                    Field::make('complex', 'crb_balcony_product_adv', 'Преимущества')
+                        ->add_fields(array(
+                            Field::make('image', 'crb_balcony_product_adv_icon', 'Иконка')
+                                ->set_width(33),
+                            Field::make('text', 'crb_balcony_product_adv_text', 'Текст преимущества')
+                                ->set_width(33),
+                        )),
+                    Field::make('text', 'crb_balcony_name_link', 'Ссылка для продукции')
+                        ->set_width(50),
+                    Field::make('text', 'crb_balcony_name_link_text', 'Текст ссылки для продукции')
+                        ->set_width(50),
+                )),
+
+
+            Field::make('text', 'crb_balcony_about_heading', 'Название секции О продукции'),
+
+            Field::make('text', 'crb_balcony_about_desc', 'Описание секции О продукции'),
+
+            Field::make('complex', 'crb_balcony_about_items', 'Блок о балконах')
+                ->add_fields(array(
+                    Field::make('image', 'crb_balcony_about_img', 'Изображение')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_balcony_about_text', 'Текст ')
+                        ->set_width(33),
+                )),
+
+        ));
+
     Container::make('theme_options', 'Stages of work')
 
         ->set_page_menu_position(3)
@@ -231,81 +425,25 @@ function site_carbon()
                 ->set_width(33)
         ));
 
-    Container::make('post_meta', 'Контент страницы')
-        ->where('post_type', '=', 'page') // только для страниц
-        ->where('post_template', 'IN', [
-            'page-rehau.php',
-            'page-wood.php',
-            'page-balcony.php',
-            'page-cottage.php',
-            'page-windowsill.php',
-            'page-components.php',
-        ])
-        ->add_tab(__('Первый экран и блок продукции'), array(
-            Field::make('rich_text', 'crb_header_text', 'Текст на первом экране')
-                ->set_width(100),
-
-            Field::make('rich_text', 'crb_header_accent', 'Акцентный текст на первом экране (например для акции)')
-                ->set_width(50),
-            Field::make('text', 'crb_header_accent_link', 'Ссылка для перехода')
-                ->set_width(25),
-            Field::make('text', 'crb_header_accent_link_text', 'Текст ссылки для перехода')
-                ->set_width(25),
-            Field::make('rich_text', 'crb_template_description', 'Текст основного преимущества'),
+    // Container::make('post_meta', 'Контент страницы')
+    //     ->where('post_type', '=', 'page') // только для страниц
+    //     ->where('post_template', 'IN', [
+    //         'page-rehau.php',
+    //         'page-wood.php',
+    //         'page-balcony.php',
+    //         'page-cottage.php',
+    //         'page-windowsill.php',
+    //         'page-components.php',
+    //     ])
 
 
-            Field::make('text', 'crb_name_section', 'Название секции'),
-            Field::make('complex', 'crb_product', 'Продукция раздела')
-                ->set_layout('tabbed-vertical')
-                ->add_fields(array(
-                    Field::make('text', 'crb_product_name', 'Название продукции')
-                        ->set_width(50),
-                    Field::make('text', 'crb_product_price', 'Цена')
-                        ->set_width(50),
-                    Field::make('image', 'crb_product_image', 'Изображение продукции')
-                        ->set_width(33),
+    //     ->add_tab(__('Преимущества'), array(
 
-                    Field::make('complex', 'crb_product_adv', 'Преимущества')
-                        ->add_fields(array(
-                            Field::make('image', 'crb_product_adv_icon', 'Изображение продукции')
-                                ->set_width(33),
-                            Field::make('text', 'crb_product_adv_key', 'Преимущество - ключ')
-                                ->set_width(33),
-                            Field::make('rich_text', 'crb_product_adv_value', 'Преимущество - значение')
-                                ->set_width(33),
-                        )),
-                    Field::make('text', 'crb_product_name_link', 'Ссылка для продукции')
-                        ->set_width(50),
-                    Field::make('text', 'crb_product_name_link_text', 'Текст ссылки для продукции')
-                        ->set_width(50),
-                ))
-        ))
+    //     ))
 
-        ->add_tab(__('Преимущества'), array(
-            Field::make('text', 'crb_adv_block_head', 'Заголовок блока'),
-            Field::make('complex', 'crb_adv', 'Преимущества')
-                ->add_fields(array(
-                    Field::make('image', 'crb_adv_icon', 'Иконка')
-                        ->set_width(33),
-                    Field::make('text', 'crb_adv_head', 'Заголовок пункта')
-                        ->set_width(33),
-                    Field::make('rich_text', 'crb_adv_desc', 'Текст преимущества')
-                        ->set_width(33),
-                )),
-        ))
+    // ->add_tab(__('Галерея проектов'), array(
 
-        ->add_tab(__('Галерея проектов'), array(
-            Field::make('rich_text', 'crb_gallery_description', 'Описание блока'),
-
-            Field::make('association', 'crb_gallery_categories', 'Категории для вывода')
-                ->set_types(array(
-                    array(
-                        'type'      => 'term',
-                        'taxonomy'  => 'gallery-cat', // твоя таксономия
-                    ),
-                ))
-                ->set_help_text('Выберите категории галереи, которые должны отображаться в блоке'),
-        ));
+    // ));
 
 
     Container::make('post_meta', 'Доп. поля проекта')

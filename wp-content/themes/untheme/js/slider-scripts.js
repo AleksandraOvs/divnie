@@ -37,6 +37,25 @@ const projectSwiper = new Swiper('.project-slider', {
   loop: true,
 });
 
+ new Swiper('.windows-types', {
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: 20,
+                // navigation: {
+                //     nextEl: '.swiper-button-next',
+                //     prevEl: '.swiper-button-prev',
+                // },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 4 }
+                }
+ });
+
 document.addEventListener('DOMContentLoaded', function() {
     const sliders = document.querySelectorAll('.project-swiper');
     sliders.forEach(function(sliderEl){

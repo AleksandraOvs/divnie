@@ -1,6 +1,6 @@
 <?php
 // Получаем все продукты
-$products = carbon_get_post_meta(get_the_ID(), 'crb_product');
+$products = carbon_get_theme_option('crb_product');
 
 if ($products) : ?>
     <div class="product-cards">

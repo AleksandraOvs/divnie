@@ -3,14 +3,14 @@
 
     <h2 class="title">Галерея проектов</h2>
 <?php
-    $gallery_description = carbon_get_post_meta(get_the_ID(), 'crb_gallery_description');
+    $gallery_description = carbon_get_theme_option('crb_gallery_description');
     if (!empty($gallery_description)){
         echo '<div class="description">'.$gallery_description.'</div>';
     }
     ?>
 
         <?php
-        $selected_terms = carbon_get_the_post_meta('crb_gallery_categories');
+        $selected_terms = carbon_get_theme_option('crb_gallery_categories');
 
         if ($selected_terms) {
             $term_ids = wp_list_pluck($selected_terms, 'id'); // массив ID категорий
@@ -26,6 +26,9 @@
                     ),
                 ),
             ));
+
+            // echo '<pre>';
+            // print_r($query);
 
             if ($query->have_posts()) : ?>
                 <div class="projects-grid">

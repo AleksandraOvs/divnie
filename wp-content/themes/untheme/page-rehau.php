@@ -28,18 +28,18 @@ get_header();
                     the_title('<h2 class="page-title">', '</h2>');
                     ?>
                     <?php
-                    if ($header_text = carbon_get_post_meta(get_the_ID(), 'crb_header_text')) {
+                    if ($header_text = carbon_get_theme_option('crb_header_text')) {
                         echo '<div class="template-header__text">' . $header_text . '</div>';
                     }
                     ?>
                 </div>
 
                 <?php
-                if ($header_accent = carbon_get_post_meta(get_the_ID(), 'crb_header_accent')) {
+                if ($header_accent = carbon_get_theme_option('crb_header_accent')) {
                     echo '<div class="template-header__accent">' . $header_accent;
 
-                    if ($header_accent_link = carbon_get_post_meta(get_the_ID(), 'crb_header_accent_link')) {
-                        $header_accent_link_text = carbon_get_post_meta(get_the_ID(), 'crb_header_accent_link_text');
+                    if ($header_accent_link = carbon_get_theme_option('crb_header_accent_link')) {
+                        $header_accent_link_text = carbon_get_theme_option('crb_header_accent_link_text');
                 ?>
                         <a class="btn" href="">
                             <?php
@@ -62,7 +62,7 @@ get_header();
 
         <div class="page-section__content">
             <?php
-            $summary_adv = carbon_get_post_meta(get_the_ID(), 'crb_template_description');
+            $summary_adv = carbon_get_theme_option('crb_template_description');
             if (!empty($summary_adv)) {
                 echo '<section class="summary_adv"><div class="fixed-container">';
                 echo $summary_adv;
@@ -73,7 +73,7 @@ get_header();
                 <div class="fixed-container">
                     <?php
                     // Название секции
-                    $section_name = carbon_get_post_meta(get_the_ID(), 'crb_name_section');
+                    $section_name = carbon_get_theme_option('crb_name_section');
                     if (!empty($section_name)) : ?>
                         <h2 class="title"><?php echo esc_html($section_name); ?></h2>
                     <?php endif; ?>
