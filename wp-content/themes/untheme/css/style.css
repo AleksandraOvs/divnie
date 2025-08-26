@@ -2746,11 +2746,16 @@ section.page-section.error-404.not-found .fixed-container .page-content .search-
     height: 100%;
 }
 
+.swiper.project-slider div .swiper-slide a:hover img {
+    filter: brightness(1.3);
+}
+
 .swiper.project-slider div .swiper-slide a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: all .5s linear;
 }
 
 .swiper.project-slider div .swiper-slide a:after {
