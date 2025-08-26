@@ -33,13 +33,37 @@ const swiperTestim = new Swiper('.testimonials-slider', {
   //loop: true,
 });
 
+const projectGridSwiper = new Swiper('.projects-grid', {
+  slidesPerView: 1.2,
+    spaceBetween: 20,
+  // navigation: {
+  //   nextEl: '.slider-testim-next',
+  //   prevEl: '.slider-testim-prev',
+  // },
+  //loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints:{
+    992:{
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+
+    576:{
+      slidesPerView: 1.8,
+    }
+  }
+});
+
 const projectSwiper = new Swiper('.project-slider', {
   slidesPerView: 1,
   // navigation: {
   //   nextEl: '.slider-testim-next',
   //   prevEl: '.slider-testim-prev',
   // },
-  loop: true,
+  //loop: true,
 });
 
  new Swiper('.windows-types', {

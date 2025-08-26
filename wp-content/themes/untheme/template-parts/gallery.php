@@ -1,13 +1,13 @@
 <section class="section-gallery">
     <div class="fixed-container">
 
-    <h2 class="title">Галерея проектов</h2>
-<?php
-    $gallery_description = carbon_get_theme_option('crb_gallery_description');
-    if (!empty($gallery_description)){
-        echo '<div class="description">'.$gallery_description.'</div>';
-    }
-    ?>
+        <h2 class="title">Галерея проектов</h2>
+        <?php
+        $gallery_description = carbon_get_theme_option('crb_gallery_description');
+        if (!empty($gallery_description)) {
+            echo '<div class="description">' . $gallery_description . '</div>';
+        }
+        ?>
 
         <?php
         $selected_terms = carbon_get_theme_option('crb_gallery_categories');
@@ -31,35 +31,38 @@
             // print_r($query);
 
             if ($query->have_posts()) : ?>
-                <div class="projects-grid">
-                    <?php while ($query->have_posts()) : $query->the_post();
-                        $gallery = carbon_get_post_meta(get_the_ID(), 'gallery_images');
-                        if (!$gallery) continue;
-                    ?>
-                        <div class="project-item">
-                            <h3><?php the_title(); ?></h3>
+                <div class="swiper projects-grid">
+                    <div class="swiper-wrapper">
+                        <?php while ($query->have_posts()) : $query->the_post();
+                            $gallery = carbon_get_post_meta(get_the_ID(), 'gallery_images');
+                            if (!$gallery) continue;
+                        ?>
+                            <div class="project-item swiper-slide">
+                                <h3><?php the_title(); ?></h3>
 
-                            <!-- Swiper слайдер -->
-                            <div class="swiper project-slider">
-                                <div class="swiper-wrapper">
-                                    <?php foreach ($gallery as $index => $img) : ?>
-                                        <div class="swiper-slide">
-                                            <a href="<?php echo esc_url($img['image']); ?>"
-                                                data-fancybox="project-<?php the_ID(); ?>"
-                                                data-caption="<?php echo esc_attr(get_the_title()); ?>">
-                                                <img src="<?php echo esc_url($img['image']); ?>" alt="<?php the_title(); ?>">
-                                            </a>
-                                        </div>
-                                    <?php endforeach; ?>
+                                <!-- Swiper слайдер -->
+                                <div class="swiper project-slider">
+                                    <div class="swiper-wrapper">
+                                        <?php foreach ($gallery as $index => $img) : ?>
+                                            <div class="swiper-slide">
+                                                <a href="<?php echo esc_url($img['image']); ?>"
+                                                    data-fancybox="project-<?php the_ID(); ?>"
+                                                    data-caption="<?php echo esc_attr(get_the_title()); ?>">
+                                                    <img src="<?php echo esc_url($img['image']); ?>" alt="<?php the_title(); ?>">
+                                                </a>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+
+                                    <!-- Навигация -->
+                                    <div class="swiper-pagination"></div>
                                 </div>
-
-                                <!-- Навигация -->
-                                <div class="swiper-pagination"></div>
                             </div>
-                        </div>
 
-                    <?php endwhile;
-                    wp_reset_postdata(); ?>
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
         <?php endif;
         }
