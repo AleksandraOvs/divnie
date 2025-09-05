@@ -377,7 +377,7 @@ function site_carbon()
 
             Field::make('text', 'crb_balcony_about_heading', 'Название секции О продукции'),
 
-            Field::make('text', 'crb_balcony_about_desc', 'Описание секции О продукции'),
+            Field::make('rich_text', 'crb_balcony_about_desc', 'Описание секции О продукции'),
 
             Field::make('complex', 'crb_balcony_about_items', 'Блок о балконах')
                 ->add_fields(array(
