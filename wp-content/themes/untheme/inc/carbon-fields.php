@@ -265,6 +265,76 @@ function site_carbon()
             Field::make('rich_text', 'crb_icon_text_summary', 'Текст')
         ))
 
+        ->add_tab(__('Коттеджи'), array(
+            // Первый экран
+            Field::make('rich_text', 'crb_cotgs_header_text', 'Текст на первом экране')
+                ->set_width(100),
+
+            Field::make('rich_text', 'crb_cotgs_header_accent', 'Акцентный текст на первом экране (например для акции)')
+                ->set_width(50),
+            Field::make('text', 'crb_cotgs_header_accent_link', 'Ссылка для перехода')
+                ->set_width(25),
+            Field::make('text', 'crb_cotgs_header_accent_link_text', 'Текст ссылки для перехода')
+                ->set_width(25),
+            Field::make('rich_text', 'crb_cotgs_template_description', 'Текст основного преимущества'),
+
+            Field::make('text', 'crb_cotgs_name_link', 'Ссылка для продукции')
+                ->set_width(50),
+            Field::make('text', 'crb_cotgs_name_link_text', 'Текст ссылки для продукции')
+                ->set_width(50),
+
+            /*advs */
+
+            Field::make('text', 'crb_cotgsadv_block_head', 'Заголовок блока Преимуществ остекления коттеджей'),
+
+
+            Field::make('rich_text', 'crb_cotgsadv_block_text', 'Текст блока Преимуществ остекления коттеджей'),
+
+            Field::make('rich_text', 'crb_cotgsadv_text_left', '1 колонка')
+                ->set_width(50),
+            Field::make('rich_text', 'crb_cotgsadv_text_right', '2 колонка')
+                ->set_width(50),
+
+            Field::make('text', 'crb_cotgs_name_section', 'Название секции Продукции'),
+            Field::make('complex', 'crb_cotgs_products', 'Продукция раздела')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('text', 'crb_cotgs_product_name', 'Название продукции')
+                        ->set_width(50),
+                    Field::make('rich_text', 'crb_cotgs_product_desc', 'Описание продукции')
+                        ->set_width(50),
+                    Field::make('image', 'crb_cotgs_product_image', 'Изображение продукции')
+                        ->set_width(33),
+                    Field::make('text', 'crb_cotgs_product_price', 'Цена')
+                        ->set_width(50),
+                    Field::make('complex', 'crb_cotgs_product_adv', 'Преимущества')
+                        ->add_fields(array(
+                            Field::make('image', 'crb_cotgs_product_adv_icon', 'Иконка')
+                                ->set_width(33),
+                            Field::make('text', 'crb_cotgs_product_adv_text', 'Текст преимущества')
+                                ->set_width(33),
+                        )),
+                    Field::make('text', 'crb_cotgs_name_link', 'Ссылка для продукции')
+                        ->set_width(50),
+                    Field::make('text', 'crb_cotgs_name_link_text', 'Текст ссылки для продукции')
+                        ->set_width(50),
+                )),
+
+            //галерея проектов
+
+            Field::make('rich_text', 'crb_cotgs_gallery_description', 'Описание блока Галереи проектов'),
+
+            Field::make('association', 'crb_cotgs_gallery_categories', 'Категории для вывода')
+                ->set_types(array(
+                    array(
+                        'type'      => 'term',
+                        'taxonomy'  => 'gallery-cat',
+                    ),
+                ))
+                ->set_help_text('Выберите категории галереи, которые должны отображаться в блоке'),
+
+        ))
+
         ->add_tab(__('Балконы и лоджии'), array(
             // Первый экран
             Field::make('rich_text', 'crb_balcony_header_text', 'Текст на первом экране')

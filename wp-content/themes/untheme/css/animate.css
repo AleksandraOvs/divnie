@@ -35,12 +35,12 @@
 }
 
 
-.toleft {
+.toLeft {
     transform: translateX(20px);
     opacity: 0;
 }
 
-.frombottom {
+.fromBottom {
     transform: translateY(50px);
     opacity: 0;
 }
@@ -51,7 +51,10 @@
     transition: transform .5s ease-in-out, opacity 1s linear;
 }
 
-.fromTop.animate, .toRight.animate{
+.fromTop.animate,
+.toRight.animate,
+.fromBottom.animate,
+.toLeft.animate {
     transform: none;
     opacity: 1;
     transition: transform 1.5s ease-in-out, opacity 0.7s linear;

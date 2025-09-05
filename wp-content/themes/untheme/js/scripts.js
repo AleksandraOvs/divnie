@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     if (window.innerWidth > 1024) {
-    const parent = document.querySelector('.menu-item-has-children');
-    if (parent) {
-        const link = parent.querySelector('a'); // первый <a> в parent
-        const submenu = parent.querySelector('.dropdown-menu'); // первый <ul> в parent
+        const parent = document.querySelector('.menu-item-has-children');
+        if (parent) {
+            const link = parent.querySelector('a'); // первый <a> в parent
+            const submenu = parent.querySelector('.dropdown-menu'); // первый <ul> в parent
 
-        // Показываем меню при наведении мыши
-        parent.addEventListener('mouseenter', () => {
-            submenu.style.display = 'block';
-        });
+            // Показываем меню при наведении мыши
+            parent.addEventListener('mouseenter', () => {
+                submenu.style.display = 'block';
+            });
 
-        parent.addEventListener('mouseleave', () => {
-            submenu.style.display = 'none';
-        });
+            parent.addEventListener('mouseleave', () => {
+                submenu.style.display = 'none';
+            });
 
-        // Переход по ссылке по клику
-        link.addEventListener('click', (e) => {
-            console.log('переход по ссылке Services');
-            // Всё равно перейдет по ссылке по умолчанию
-        });
-    }
+            // Переход по ссылке по клику
+            link.addEventListener('click', (e) => {
+                console.log('переход по ссылке Services');
+                // Всё равно перейдет по ссылке по умолчанию
+            });
+        }
     }
 
 
@@ -141,27 +141,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     let options = { threshold: [0.5] };
     let observer = new IntersectionObserver(onEntry, options);
-    let elements = document.querySelectorAll('.fromTop, .toRight, .toleft, .fromBottom, .fromOpacity');
+    let elements = document.querySelectorAll('.fromTop, .toRight, .toLeft, .fromBottom, .fromOpacity');
     for (let elm of elements) {
         observer.observe(elm);
     };
 
 
 
-if (window.innerWidth > 1200) {
-    window.addEventListener('load', () => {
-        const textBlocks = document.querySelectorAll('.services-list__item');
-        const targetBlocks = document.querySelectorAll('.section-services__inner__right__text');
+    if (window.innerWidth > 1200) {
+        window.addEventListener('load', () => {
+            const textBlocks = document.querySelectorAll('.services-list__item');
+            const targetBlocks = document.querySelectorAll('.section-services__inner__right__text');
 
-        textBlocks.forEach((textBlock, index) => {
-            const targetBlock = targetBlocks[index];
-            if (targetBlock) {
-                const height = textBlock.offsetHeight;
-                targetBlock.style.height = `${height}px`;
-            }
+            textBlocks.forEach((textBlock, index) => {
+                const targetBlock = targetBlocks[index];
+                if (targetBlock) {
+                    const height = textBlock.offsetHeight;
+                    targetBlock.style.height = `${height}px`;
+                }
+            });
         });
-    });
-}
+    }
 
 
     // var elem = document.querySelector('.review-group');
@@ -190,40 +190,40 @@ if (window.innerWidth > 1200) {
         body.toggleClass('_fixed');
 
     });
-	
-	
-  const titleField = document.querySelector('input[name="page_title"]');
-  if (titleField) {
-    titleField.value = document.title;
-  }
+
+
+    const titleField = document.querySelector('input[name="page_title"]');
+    if (titleField) {
+        titleField.value = document.title;
+    }
 });
 
-document.addEventListener('wpcf7mailsent', function(event) {
-  const modal = document.getElementById('cf7-success-modal');
-  if (modal) {
-    modal.style.display = 'block';
+document.addEventListener('wpcf7mailsent', function (event) {
+    const modal = document.getElementById('cf7-success-modal');
+    if (modal) {
+        modal.style.display = 'block';
 
-    // Автоматическое закрытие через 10 секунд (10000 мс)
-    setTimeout(function() {
-      modal.style.display = 'none';
-    }, 10000);
-  }
+        // Автоматическое закрытие через 10 секунд (10000 мс)
+        setTimeout(function () {
+            modal.style.display = 'none';
+        }, 10000);
+    }
 }, false);
 
 // Закрытие по крестику и по клику вне окна
 document.addEventListener('DOMContentLoaded', function () {
-  const closeBtn = document.querySelector('.cf7-close');
-  const modal = document.getElementById('cf7-success-modal');
-  if (closeBtn && modal) {
-    closeBtn.addEventListener('click', function () {
-      modal.style.display = 'none';
-    });
-    window.addEventListener('click', function (e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  }
+    const closeBtn = document.querySelector('.cf7-close');
+    const modal = document.getElementById('cf7-success-modal');
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+        window.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
 });
 
 
