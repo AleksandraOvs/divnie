@@ -3935,8 +3935,14 @@ figure.wp-block-image {
         width: calc(100% - 200px);
     }
 
+    .product-card.product-balcony .product-card__image {
+        height: 250px;
+        width: 250px;
+    }
+
     .product-card.product-balcony {
         flex-direction: column;
+        display: flex;
     }
 
     .about-item__text {
