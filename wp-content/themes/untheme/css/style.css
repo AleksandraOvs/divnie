@@ -4176,6 +4176,11 @@ figure.wp-block-image {
         margin: 0 auto;
     }
 
+    .product-card.product-balcony .product-card__content .product-price {
+        flex-direction: column;
+        gap: 20px;
+    }
+
 
     footer.site-footer .fixed-container ul li p,
     footer.site-footer .fixed-container ul li span,
