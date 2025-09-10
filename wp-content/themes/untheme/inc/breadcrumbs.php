@@ -10,12 +10,12 @@ function site_breadcrumbs()
 
     if (is_front_page()) {
         if ($page_num > 1) {
-            echo '<a href="' . site_url() . '">Home</a>' . $separator . $page_num . '-page';
+            echo '<a href="' . site_url() . '">Главная</a>' . $separator . $page_num . '-page';
         } else {
             echo 'Вы находитесь на главной странице';
         }
     } else {
-        echo '<a href="' . site_url() . '">Home</a>' . $separator;
+        echo '<a href="' . site_url() . '">Главная</a>' . $separator;
 
         // Универсально для записей любых типов
         if (is_singular()) {
@@ -44,12 +44,10 @@ function site_breadcrumbs()
             }
 
             the_title();
-
         } elseif (is_post_type_archive()) {
             $post_type = get_post_type();
             $post_type_obj = get_post_type_object($post_type);
             echo esc_html($post_type_obj->labels->name);
-
         } elseif (is_tax()) {
             $term = get_queried_object();
             if ($term) {
@@ -64,29 +62,22 @@ function site_breadcrumbs()
                 }
                 echo esc_html($term->name);
             }
-
         } elseif (is_page()) {
             the_title();
-
         } elseif (is_tag()) {
             single_tag_title();
-
         } elseif (is_day()) {
             echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
             echo '<a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time('F') . '</a>' . $separator;
             echo get_the_time('d');
-
         } elseif (is_month()) {
             echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
             echo get_the_time('F');
-
         } elseif (is_year()) {
             echo get_the_time('Y');
-
         } elseif (is_author()) {
             $userdata = get_userdata(get_query_var('author'));
             echo 'Опубликовал(а) ' . esc_html($userdata->display_name);
-
         } elseif (is_404()) {
             echo 'Error 404';
         }

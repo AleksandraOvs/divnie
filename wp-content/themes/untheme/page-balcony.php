@@ -87,7 +87,7 @@ get_header();
 
             <?php get_template_part('template-parts/front-blocks/03banner'); ?>
 
-            <?php get_template_part('template-parts/balcony/balcony-gallery'); ?>
+            <?php get_template_part('template-parts/gallery'); ?>
 
             <?php
             $content = get_the_content();
