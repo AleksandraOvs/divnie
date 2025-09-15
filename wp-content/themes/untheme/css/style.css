@@ -471,11 +471,15 @@ section.section-nums {
     width: calc(100% / 3 - 40px);
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .num-item__content {
     font-family: 'Oswald', sans-serif;
     width: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .num-item__content .num-head {
@@ -3571,7 +3575,7 @@ figure.wp-block-image {
         display: flex;
     }
 
-    .nums .num-item {
+    /* .nums .num-item {
         flex-direction: column;
         gap: 5px;
         justify-content: flex-start;
@@ -3582,6 +3586,28 @@ figure.wp-block-image {
     .num-item__content__num p {
         text-align: center;
     }
+
+    .num-item__content__num {
+        justify-content: center;
+    } */
+
+    .nums {
+        gap: 20px;
+    }
+
+    .nums .num-item {
+        gap: 10px;
+    }
+
+    .num-item__img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nums .num-item {
+        width: calc(100% / 3);
+    }
+
 
     .hero-slide-content__left {
         width: 60%;
