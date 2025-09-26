@@ -75,12 +75,12 @@ if ($products) : ?>
                     <div class="product-price">
                         <!-- Цена продукции -->
                         <?php if (!empty($product['crb_cotgs_product_price'])) : ?>
-                            <p class="product-price"><?php echo esc_html($product['crb_cotgs_product_price']); ?></p>
+                            <p class="product-price"><?php echo $product['crb_cotgs_product_price'] ?></p>
                         <?php endif; ?>
 
                         <!-- Ссылка для продукции -->
                         <?php if (!empty($product['crb_cotgs_name_link'])) : ?>
-                            <a class="btn" href="<?php echo esc_url($product['crb_cotgs_name_link']); ?>">
+                            <a class="btn" href="<?php echo $product['crb_cotgs_name_link'] ?>">
                                 <?php
                                 echo !empty($product['crb_cotgs_name_link_text'])
                                     ? esc_html($product['crb_cotgs_name_link_text'])
