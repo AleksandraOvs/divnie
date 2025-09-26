@@ -305,7 +305,7 @@ function site_carbon()
                         ->set_width(50),
                     Field::make('image', 'crb_cotgs_product_image', 'Изображение продукции')
                         ->set_width(33),
-                    Field::make('text', 'crb_cotgs_product_price', 'Цена')
+                    Field::make('rich_text', 'crb_cotgs_product_price', 'Цена')
                         ->set_width(50),
                     Field::make('complex', 'crb_cotgs_product_adv', 'Преимущества')
                         ->add_fields(array(
