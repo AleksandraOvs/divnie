@@ -20,13 +20,13 @@ const swiperTestim = new Swiper('.testimonials-slider', {
     nextEl: '.slider-testim-next',
     prevEl: '.slider-testim-prev',
   },
-  breakpoints:{
-    992:{
+  breakpoints: {
+    992: {
       slidesPerView: 3,
       spaceBetween: 40,
     },
 
-    576:{
+    576: {
       slidesPerView: 1.8,
     }
   }
@@ -35,7 +35,7 @@ const swiperTestim = new Swiper('.testimonials-slider', {
 
 const projectGridSwiper = new Swiper('.projects-grid', {
   slidesPerView: 1.2,
-    spaceBetween: 20,
+  spaceBetween: 20,
   // navigation: {
   //   nextEl: '.slider-testim-next',
   //   prevEl: '.slider-testim-prev',
@@ -45,19 +45,19 @@ const projectGridSwiper = new Swiper('.projects-grid', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  breakpoints:{
-    992:{
+  breakpoints: {
+    992: {
       slidesPerView: 3,
       spaceBetween: 40,
     },
 
-    576:{
+    576: {
       slidesPerView: 1.8,
     }
   }
 });
 
-const projectSwiper = new Swiper('.project-slider', {
+const projectSwiper = new Swiper('.projects-slider', {
   slidesPerView: 1,
   // navigation: {
   //   nextEl: '.slider-testim-next',
@@ -66,39 +66,39 @@ const projectSwiper = new Swiper('.project-slider', {
   //loop: true,
 });
 
- new Swiper('.windows-types', {
-                loop: true,
-                slidesPerView: 3,
-                spaceBetween: 20,
-                // navigation: {
-                //     nextEl: '.swiper-button-next',
-                //     prevEl: '.swiper-button-prev',
-                // },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    320: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 4 }
-                }
- });
+new Swiper('.windows-types', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 20,
+  // navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  // },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 4 }
+  }
+});
 
-document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('.project-swiper');
-    sliders.forEach(function(sliderEl){
-        new Swiper(sliderEl, {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: sliderEl.querySelector('.swiper-pagination'),
-                clickable: true,
-            },
-        });
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.project-swiper');
+  sliders.forEach(function (sliderEl) {
+    new Swiper(sliderEl, {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: sliderEl.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
     });
+  });
 
-    // Fancybox — автоматически инициализируется по data-fancybox
-    //Fancybox.bind("[data-fancybox]", {});
+  // Fancybox — автоматически инициализируется по data-fancybox
+  //Fancybox.bind("[data-fancybox]", {});
 });

@@ -400,6 +400,20 @@ function site_carbon()
                 ))
                 ->set_help_text('Выберите категории галереи, которые должны отображаться в блоке'),
 
+        ))
+
+        ->add_tab(__('Подоконники'), array(
+            Field::make('rich_text', 'crb_wsills_text', 'Текст на первом экране')
+                ->set_width(100),
+
+            Field::make('rich_text', 'crb_wsills_accent', 'Акцентный текст на первом экране (например для акции)')
+                ->set_width(50),
+            Field::make('text', 'crb_wsills_accent_link', 'Ссылка для перехода')
+                ->set_width(25),
+            Field::make('text', 'crb_wsills_accent_link_text', 'Текст ссылки для перехода')
+                ->set_width(25),
+            Field::make('rich_text', 'crb_wtwsills_description', 'Текст основного преимущества'),
+
         ));
 
     Container::make('theme_options', 'Stages of work')

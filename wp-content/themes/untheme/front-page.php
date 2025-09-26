@@ -26,11 +26,13 @@
 
 <?php get_template_part('template-parts/advantages'); ?>
 
-<?php //get_template_part('template-parts/front-blocks/0services'); ?>
-<?php //get_template_part('template-parts/front-blocks/03why-block'); ?>
+<?php //get_template_part('template-parts/front-blocks/0services'); 
+?>
+<?php //get_template_part('template-parts/front-blocks/03why-block'); 
+?>
 <?php get_template_part('template-parts/front-blocks/04testimonials'); ?>
 <?php get_template_part('template-parts/front-blocks/05form-block'); ?>
-<?php get_template_part('template-parts/front-blocks/06projects'); ?>
+<?php get_template_part('template-parts/front-blocks/04projects'); ?>
 <?php get_template_part('template-parts/front-blocks/07faq'); ?>
 
 

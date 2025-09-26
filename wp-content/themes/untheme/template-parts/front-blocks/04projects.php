@@ -26,10 +26,25 @@
                                 echo '<div class="swiper-slide project-slider__slide-group">';
                                 while ($projects_query->have_posts()) : $projects_query->the_post();
                                     if ($count > 0 && $count % 4 === 0) {
+                                        echo '<div class="project-slide__item">';
+                                        if (has_post_thumbnail()) :
+                                            $thumb_full = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
+                                          <a href="<?php echo esc_url($thumb_full); ?>" data-fancybox="gallery" data-caption="<?php the_title_attribute(); ?>">
+                                              <?php the_post_thumbnail('medium'); ?>
+                                              <div class="project-slide__content">
+                                                  <h4 class="project-slide__title"><?php the_title(); ?></h4>
+
+                                                  <?php if ($desc = carbon_get_post_meta(get_the_ID(), 'crb_project_desc')) : ?>
+                                                      <div class="project-description"><?php echo $desc ?></div>
+                                                  <?php endif; ?>
+                                              </div>
+                                          </a>
+                                  <?php endif;
+                                        echo '</div>';
                                         // Закрываем предыдущий слайд и открываем новый
                                         echo '</div><div class="swiper-slide project-slider__slide-group">';
                                     }
-                            ?>
+                                    ?>
                                   <div class="project-slide__item">
                                       <?php if (has_post_thumbnail()) :
                                             $thumb_full = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
@@ -37,7 +52,7 @@
                                               <?php the_post_thumbnail('medium'); ?>
                                               <div class="project-slide__content">
                                                   <h4 class="project-slide__title"><?php the_title(); ?></h4>
-                                                
+
                                                   <?php if ($desc = carbon_get_post_meta(get_the_ID(), 'crb_project_desc')) : ?>
                                                       <div class="project-description"><?php echo $desc ?></div>
                                                   <?php endif; ?>
