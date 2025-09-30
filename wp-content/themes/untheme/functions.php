@@ -182,9 +182,9 @@ function untheme_scripts()
 	wp_enqueue_script('js-accordion', get_template_directory_uri() . '/js/accordion.js', array(), null, true);
 
 	wp_enqueue_script('js-loadmore', get_template_directory_uri() . '/js/ajax.js', array(), null, true);
-	 wp_localize_script('js-loadmore', 'ajaxData', [
-        'ajax_url' => admin_url('admin-ajax.php'),
-    ]);
+	wp_localize_script('js-loadmore', 'ajaxData', [
+		'ajax_url' => admin_url('admin-ajax.php'),
+	]);
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
@@ -195,8 +195,8 @@ add_action('after_setup_theme', 'gut_styles');
 
 function gut_styles()
 {
-    add_theme_support('editor-styles');
-    add_editor_style('css/admin-styles.css');
+	add_theme_support('editor-styles');
+	add_editor_style('css/admin-styles.css');
 }
 /**
  * Implement the Custom Header feature.
@@ -271,12 +271,17 @@ function get_current_template($echo = false)
 }
 
 ## Удаляет "Рубрика: ", "Метка: " и т.д. из заголовка архива
-add_filter( 'get_the_archive_title', function( $title ){
-	return preg_replace('~^[^:]+: ~', '', $title );
+add_filter('get_the_archive_title', function ($title) {
+	return preg_replace('~^[^:]+: ~', '', $title);
 });
 
 // Contact Form 7 remove auto added p tags
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+add_filter('carbon_fields_sanitize_rich_text', function ($value) {
+	return $value; // Сохраняем как есть, без wp_kses_post
+});
+
 
 //flush_rewrite_rules();
 
@@ -289,4 +294,3 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 //     );
 // }
 // add_action('init', 'custom_services_rewrite_rules');
-

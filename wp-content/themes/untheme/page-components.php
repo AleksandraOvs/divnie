@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Template name: Шаблон Подоконники
+ * Template name: Шаблон Комплектующие
  */
-
 get_header();
 ?>
 
@@ -28,18 +27,18 @@ get_header();
                     the_title('<h2 class="page-title">', '</h2>');
                     ?>
                     <?php
-                    if ($header_text = carbon_get_theme_option('crb_wsills_text')) {
+                    if ($header_text = carbon_get_theme_option('crb_comps_header_text')) {
                         echo '<div class="template-header__text">' . $header_text . '</div>';
                     }
                     ?>
                 </div>
 
                 <?php
-                if ($header_accent = carbon_get_theme_option('crb_wsills_accent')) {
+                if ($header_accent = carbon_get_theme_option('crb_comps_header_accent')) {
                     echo '<div class="template-header__accent">' . $header_accent;
 
-                    if ($header_accent_link = carbon_get_theme_option('crb_wsills_accent_link')) {
-                        $header_accent_link_text = carbon_get_theme_option('crb_wsills_accent_link_text');
+                    if ($header_accent_link = carbon_get_theme_option('crb_comps_header_accent_link')) {
+                        $header_accent_link_text = carbon_get_theme_option('crb_comps_header_accent_link_text');
                 ?>
                         <a class="btn" href="">
                             <?php
@@ -60,29 +59,14 @@ get_header();
             </div>
         </header><!-- .page-header -->
 
-
         <div class="page-section__content">
-            <?php
-            $summary_adv = carbon_get_theme_option('crb_wsills_description');
-            if (!empty($summary_adv)) {
-                echo '<section class="summary_adv"><div class="fixed-container">';
-                echo $summary_adv;
-                echo '</div></section>';
-            }
-            ?>
+            <?php get_template_part('template-parts/components/comps-list') ?>
 
-            <?php get_template_part('template-parts/window-sills/adv-wsills') ?>
-
-            <?php get_template_part('template-parts/front-blocks/03banner'); ?>
-
+            <?php get_template_part('template-parts/front-blocks/03banner') ?>
         </div>
-
-
     </div>
 
 </main><!-- #main -->
 
 
-<?php
-get_footer();
-?>
+<?php get_footer() ?>

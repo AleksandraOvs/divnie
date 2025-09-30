@@ -412,9 +412,66 @@ function site_carbon()
                 ->set_width(25),
             Field::make('text', 'crb_wsills_accent_link_text', 'Текст ссылки для перехода')
                 ->set_width(25),
-            Field::make('rich_text', 'crb_wtwsills_description', 'Текст основного преимущества'),
+            Field::make('rich_text', 'crb_wsills_description', 'Текст основного преимущества'),
 
+            /*advs */
+
+            Field::make('text', 'crb_wsills_adv_block_head', 'Заголовок блока Преимуществ(ал.подоконники) '),
+
+
+            Field::make('rich_text', 'crb_wsills_adv_block_text', 'Текст блока Преимуществ(ал.подоконники) '),
+
+            Field::make('rich_text', 'crb_wsills_adv_text_left', '1 колонка')
+                ->set_width(50),
+            Field::make('rich_text', 'crb_wsills_adv_text_right', '2 колонка')
+                ->set_width(50),
+
+            /*advs */
+            Field::make('complex', 'crb_wsadv', 'Пункты преимуществ')
+                ->add_fields(array(
+                    Field::make('image', 'crb_wsadv_icon', 'Иконка')
+                        ->set_width(33),
+                    Field::make('text', 'crb_wsadv_head', 'Заголовок пункта')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_wsadv_desc', 'Текст преимущества')
+                        ->set_width(33),
+                )),
+        ))
+
+        ->add_tab(__('Комплектующие'), array(
+            // Первый экран
+            Field::make('rich_text', 'crb_comps_header_text', 'Текст на первом экране')
+                ->set_width(100),
+
+            Field::make('rich_text', 'crb_comps_header_accent', 'Акцентный текст на первом экране (например для акции)')
+                ->set_width(50),
+            Field::make('text', 'crb_comps_header_accent_link', 'Ссылка для перехода')
+                ->set_width(25),
+            Field::make('text', 'crb_comps_header_accent_link_text', 'Текст ссылки для перехода')
+                ->set_width(25),
+            Field::make('rich_text', 'crb_comps_template_description', 'Текст основного преимущества'),
+
+            Field::make('text', 'crb_comps_name_link', 'Ссылка для продукции')
+                ->set_width(50),
+            Field::make('text', 'crb_comps_name_link_text', 'Текст ссылки для продукции')
+                ->set_width(50),
+
+            Field::make('complex', 'crb_comps', 'Список комплектующих')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('image', 'crb_comps_img', 'Изображение')
+                        ->set_width(20),
+                    Field::make('text', 'crb_comps_head', 'Заголовок пункта')
+                        ->set_width(20),
+                    Field::make('text', 'crb_comps_head_link', 'Ссылка')
+                        ->set_width(20),
+                    Field::make('rich_text', 'crb_comps_text', 'Текст')
+                        ->set_width(40),
+                    Field::make('text', 'crb_comps_form_link', 'Ссылка на форму')
+                        ->set_width(40),
+                )),
         ));
+
 
     Container::make('theme_options', 'Stages of work')
 
