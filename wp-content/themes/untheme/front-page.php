@@ -32,7 +32,8 @@
 ?>
 <?php get_template_part('template-parts/front-blocks/04testimonials'); ?>
 <?php get_template_part('template-parts/front-blocks/05form-block'); ?>
-<?php get_template_part('template-parts/front-blocks/04projects'); ?>
+<?php //get_template_part('template-parts/front-blocks/04projects'); 
+?>
 <?php get_template_part('template-parts/front-blocks/07faq'); ?>
 
 
