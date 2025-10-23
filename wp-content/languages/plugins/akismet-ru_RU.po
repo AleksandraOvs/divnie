@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Akismet Anti-spam: Spam Protection - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-15 18:37:40+0000\n"
+"PO-Revision-Date: 2025-08-01 13:09:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,6 +53,10 @@ msgstr "Ознакомьтесь с поддерживаемыми интегр�
 #: views/compatible-plugins.php:21
 msgid "Akismet works with other plugins to keep spam away."
 msgstr "Akismet работает с другими плагинами для защиты от спама."
+
+#: views/compatible-plugins.php:13
+msgid "New"
+msgstr "Новый"
 
 #: views/compatible-plugins.php:12
 msgid "Compatible plugins"

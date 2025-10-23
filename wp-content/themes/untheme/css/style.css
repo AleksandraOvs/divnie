@@ -4549,3 +4549,49 @@ figure.wp-block-image {
 .wp-block-media-text {
     grid-template-columns: 12% auto !important;
 }
+
+
+.wp-block-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+}
+
+.wp-block-list li {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 15px 1fr;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.wp-block-list li::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--accent);
+    display: block;
+    transform: rotate(45deg);
+}
+
+.wp-block-list li::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--light-grey);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.wp-block-media-text__content p {
+    margin: 0;
+}
+
+.bradius3 {
+    border-radius: 3px;
+}
