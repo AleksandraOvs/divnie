@@ -213,8 +213,21 @@ function gutpurple_scripts()
 		null,
 		true // грузить в footer
 	);
+
+	// Путь к файлу относительно корня темы
+	$script_path = get_template_directory_uri() . '/js/editor-media-text-px.js';
+
+	wp_enqueue_script(
+		'media-text-px-control',             // Уникальный хэндл
+		$script_path,                        // Путь к файлу
+		['wp-blocks', 'wp-dom', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-compose', 'wp-hooks', 'wp-block-editor'], // зависимости
+		filemtime(get_template_directory() . '/js/editor-media-text-px.js'), // версия = время последнего изменения файла
+		true                                 // загружаем внизу
+	);
 }
 add_action('wp_enqueue_scripts', 'gutpurple_scripts');
+
+
 
 /**
  * Implement the Custom Header feature.
@@ -323,14 +336,3 @@ add_filter('carbon_fields_sanitize_rich_text', function ($value) {
 add_filter('get_the_archive_title', function ($title) {
 	return preg_replace('~^[^:]+: ~', '', $title);
 });
-
-// Путь к файлу относительно корня темы
-$script_path = get_template_directory_uri() . '/js/editor-media-text-px.js';
-
-wp_enqueue_script(
-	'media-text-px-control',             // Уникальный хэндл
-	$script_path,                        // Путь к файлу
-	['wp-blocks', 'wp-dom', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-compose', 'wp-hooks', 'wp-block-editor'], // зависимости
-	filemtime(get_template_directory() . '/js/editor-media-text-px.js'), // версия = время последнего изменения файла
-	true                                 // загружаем внизу
-);
