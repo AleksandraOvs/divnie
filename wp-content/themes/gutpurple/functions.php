@@ -124,19 +124,52 @@ add_action('after_setup_theme', 'gutpurple_content_width', 0);
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
 function gutpurple_widgets_init()
 {
-	register_sidebar(
-		array(
-			'name'          => esc_html__('Sidebar', 'gutpurple'),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Add widgets here.', 'gutpurple'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+	register_sidebar(array(
+		'name'          => esc_html__('Sidebar', 'gutpurple'),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__('Виджет для отображения на внутренних страницах', 'gutpurple'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+
+	register_sidebar(array(
+		'name'          => esc_html__('Footer Sidebar 1', 'gutpurple'),
+		'id'            => 'footer-sidebar-1',
+		'description'   => esc_html__('Add widgets here.', 'gutpurple'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
+
+	register_sidebar(array(
+		'name'          => esc_html__('Footer Sidebar 2', 'gutpurple'),
+		'id'            => 'footer-sidebar-2',
+		'description'   => esc_html__('Add widgets here.', 'gutpurple'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
+
+	register_sidebar(array(
+		'name'          => esc_html__('Footer Sidebar 3', 'gutpurple'),
+		'id'            => 'footer-sidebar-3',
+		'description'   => esc_html__('Add widgets here.', 'gutpurple'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
 }
 add_action('widgets_init', 'gutpurple_widgets_init');
 
@@ -205,7 +238,7 @@ require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/inc/walker.php';
 
-require get_template_directory() . '/inc/color-palette.php';
+require get_template_directory() . '/inc/post-types.php';
 
 /**
  * Carbon fields.
@@ -224,21 +257,21 @@ if (defined('JETPACK__VERSION')) {
  * Guttenberg support
  */
 
-function mytheme_setup()
-{
-	// Добавляем поддержку блоков
-	add_theme_support('align-wide'); // Поддержка широкого и полного выравнивания
-	add_theme_support('editor-styles'); // Позволяет использовать кастомные стили в редакторе
-	add_theme_support('wp-block-styles'); // Подключает стили по умолчанию для блоков
-	add_theme_support('responsive-embeds'); // Адаптивные вставки (видео и др.)
+// function mytheme_setup()
+// {
+// 	// Добавляем поддержку блоков
+// 	add_theme_support('align-wide'); // Поддержка широкого и полного выравнивания
+// 	add_theme_support('editor-styles'); // Позволяет использовать кастомные стили в редакторе
+// 	add_theme_support('wp-block-styles'); // Подключает стили по умолчанию для блоков
+// 	add_theme_support('responsive-embeds'); // Адаптивные вставки (видео и др.)
 
-}
-add_action('after_setup_theme', 'mytheme_setup');
+// }
+// add_action('after_setup_theme', 'mytheme_setup');
 
-add_action('after_setup_theme', function () {
-	// Включаем поддержку стилей редактора
-	add_theme_support('editor-styles');
-});
+// add_action('after_setup_theme', function () {
+// 	// Включаем поддержку стилей редактора
+// 	add_theme_support('editor-styles');
+// });
 
 // Подключаем стиль только для редактора
 add_action('enqueue_block_editor_assets', function () {

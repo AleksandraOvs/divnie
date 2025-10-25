@@ -123,4 +123,16 @@ function site_carbon()
                     Field::make('text', 'crb_feed_sign', 'Testimonial Sign'),
                 ))
         ));
+
+    Container::make('post_meta', 'Настройки шаблона')
+        ->where('post_type', '=', 'page')
+        ->add_fields([
+            Field::make('association', 'template_page', 'Выберите шаблон')
+                ->set_types([
+                    [
+                        'type'      => 'post',
+                        'post_type' => 'custom_template',
+                    ]
+                ]),
+        ]);
 };

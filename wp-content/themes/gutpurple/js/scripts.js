@@ -184,4 +184,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     //});
+
+    // Проверяем ширину экрана
+    //if (window.innerWidth > 992) {
+    const header = document.querySelector('.header-main');
+
+    if (header) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 150) {
+                header.classList.add('scroll');
+            } else {
+                header.classList.remove('scroll');
+            }
+        });
+    }
+    //}
 });

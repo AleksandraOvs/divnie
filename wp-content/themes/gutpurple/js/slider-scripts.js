@@ -13,6 +13,82 @@ new Swiper('.hero-slider', {
   // },
 });
 
+const twosliderSwiper = new Swiper('.two-slides-slider', {
+  slidesPerView: 1.4, // 2 слайда в ряд
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.slider__button-next',
+    prevEl: '.slider__button-prev',
+  },
+  pagination: {
+    el: '.slider-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+  },
+
+});
+
+const threesliderSwiper = new Swiper('.three-slides-slider', {
+  slidesPerView: 1, // 2 слайда в ряд
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.slider__button-next',
+    prevEl: '.slider__button-prev',
+  },
+  pagination: {
+    el: '.slider-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 3,
+    },
+
+    576: {
+      spaceBetween: 20,
+      slidesPerView: 1.6,
+    }
+  },
+
+});
+
+const foursliderSwiper = new Swiper('.four-slides-slider', {
+  slidesPerView: 1.4, // 2 слайда в ряд
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.slider__button-next',
+    prevEl: '.slider__button-prev',
+  },
+  pagination: {
+    el: '.slider-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    1200: {
+      spaceBetween: 40,
+      slidesPerView: 4,
+    },
+
+    768: {
+      spaceBetween: 20,
+      slidesPerView: 3,
+    },
+  },
+
+});
+
+
+
 const swiperTestim = new Swiper('.testimonials-slider', {
   slidesPerView: 1.2,
   spaceBetween: 20,
@@ -57,14 +133,14 @@ const projectGridSwiper = new Swiper('.projects-grid', {
   }
 });
 
-const projectSwiper = new Swiper('.projects-slider', {
-  slidesPerView: 1,
-  // navigation: {
-  //   nextEl: '.slider-testim-next',
-  //   prevEl: '.slider-testim-prev',
-  // },
-  //loop: true,
-});
+// const projectSwiper = new Swiper('.projects-slider', {
+//   slidesPerView: 1,
+//   // navigation: {
+//   //   nextEl: '.slider-testim-next',
+//   //   prevEl: '.slider-testim-prev',
+//   // },
+//   //loop: true,
+// });
 
 new Swiper('.windows-types', {
   loop: true,
