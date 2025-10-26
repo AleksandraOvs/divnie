@@ -456,6 +456,21 @@ figure.bradius32,
     flex-direction: column;
 }
 
+.three-slides-slider .swiper-wrapper {
+    min-height: 430px;
+}
+
+.wp-block-group.three-slides-slider__slide figure {
+    height: 100%;
+}
+
+.wp-block-group.three-slides-slider__slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /*4 slider*/
 
 .four-slides-slider .swiper-wrapper {
