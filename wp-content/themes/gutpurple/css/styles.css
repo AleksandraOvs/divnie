@@ -465,8 +465,25 @@ figure.bradius32,
 }
 
 .wp-block-group.three-slides-slider__slide {
+    position: relative;
     overflow: hidden;
-    border-radius: 5;
+    border-radius: 5px;
+}
+
+.three-slides-slider__slide>.wp-block-group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.wp-block-image.three-slides-slider__slide__image figcaption {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
 }
 
 .wp-block-group.three-slides-slider__slide figure img {
