@@ -97,5 +97,25 @@
       "text": "#333333",
       "background": "#ffffff"
     }
-  }
+  },
+
+  "blocks": {
+      "core/media-text": {
+        "spacing": {
+          "margin": true,
+          "padding": true
+        },
+        "dimensions": {
+          "width": true,
+          "height": true
+        },
+        "style": {
+          "elements": {
+            "image": {
+              "properties": ["width", "height"]
+            }
+          }
+        }
+      }
+    }
 }

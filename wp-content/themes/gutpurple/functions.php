@@ -184,7 +184,7 @@ function gutpurple_scripts()
 	wp_enqueue_style('fonts', get_stylesheet_directory_uri() . '/css/fonts.css', array(), time());
 	wp_enqueue_style('swiper_styles', get_stylesheet_directory_uri() . '/inc/swiper/swiper-bundle.min.css', array(), time());
 
-	wp_enqueue_style('color_palette', get_stylesheet_directory_uri() . '/css/color-palette.css', array(), time());
+	//wp_enqueue_style('color_palette', get_stylesheet_directory_uri() . '/css/color-palette.css', array(), time());
 	wp_enqueue_style('theme_styles', get_stylesheet_directory_uri() . '/css/styles.css', array(), time());
 
 	wp_enqueue_script('gutpurple-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true);
@@ -215,19 +215,23 @@ function gutpurple_scripts()
 	);
 
 	// Путь к файлу относительно корня темы
-	$script_path = get_template_directory_uri() . '/js/editor-media-text-px.js';
+	// $script_path = get_template_directory_uri() . '/js/editor-media-text-px.js';
 
-	wp_enqueue_script(
-		'media-text-px-control',             // Уникальный хэндл
-		$script_path,                        // Путь к файлу
-		['wp-blocks', 'wp-dom', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-compose', 'wp-hooks', 'wp-block-editor'], // зависимости
-		filemtime(get_template_directory() . '/js/editor-media-text-px.js'), // версия = время последнего изменения файла
-		true                                 // загружаем внизу
-	);
+	// wp_enqueue_script(
+	// 	'media-text-px-control',             // Уникальный хэндл
+	// 	$script_path,                        // Путь к файлу
+	// 	['wp-blocks', 'wp-dom', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-compose', 'wp-hooks', 'wp-block-editor'], // зависимости
+	// 	filemtime(get_template_directory() . '/js/editor-media-text-px.js'), // версия = время последнего изменения файла
+	// 	true                                 // загружаем внизу
+	// );
 }
 add_action('wp_enqueue_scripts', 'gutpurple_scripts');
 
+// function gutpurple_add_scripts()
+// {
 
+// }
+// add_action('wp_enqueue_scripts', 'gutpurple_add_scripts');
 
 /**
  * Implement the Custom Header feature.

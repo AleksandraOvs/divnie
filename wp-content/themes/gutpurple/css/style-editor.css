@@ -1339,3 +1339,8 @@ figure.bradius32,
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
+.wp-block-group.block-editor-block-list__layout {
+    background: #38387b0f;
+    border: 1px solid var(--accent);
+}
