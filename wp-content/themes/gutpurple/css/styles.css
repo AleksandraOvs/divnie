@@ -294,8 +294,14 @@ figure.bradius32,
 
 .gap0 {
     gap: 0 !important;
-
 }
+
+.gap10 {
+    gap: 10px !important;
+}
+
+
+
 
 .wp-block-list li {
     position: relative;
