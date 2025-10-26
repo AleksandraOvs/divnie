@@ -1344,3 +1344,20 @@ figure.bradius32,
     background: #38387b0f;
     border: 1px solid var(--accent);
 }
+
+.three-slides-slider__slide>.wp-block-group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(7deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0) 100%);
+}
+
+.wp-block-image.three-slides-slider__slide__image figcaption {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+}
