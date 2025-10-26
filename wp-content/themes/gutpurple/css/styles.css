@@ -449,6 +449,13 @@ figure.bradius32,
     transition: all .5s linear;
 }
 
+/*3 slider*/
+
+.wp-block-columns.three-slides-slider {
+    display: flex;
+    flex-direction: column;
+}
+
 /*4 slider*/
 
 .four-slides-slider .swiper-wrapper {
