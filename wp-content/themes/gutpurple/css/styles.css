@@ -458,6 +458,7 @@ figure.bradius32,
 
 .three-slides-slider .swiper-wrapper {
     min-height: 430px;
+    height: 430px;
 }
 
 .wp-block-group.three-slides-slider__slide figure {
@@ -467,7 +468,7 @@ figure.bradius32,
 .wp-block-group.three-slides-slider__slide {
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .three-slides-slider__slide>.wp-block-group {
@@ -482,7 +483,7 @@ figure.bradius32,
 .wp-block-image.three-slides-slider__slide__image figcaption {
     display: block;
     position: absolute;
-    bottom: 10px;
+    top: 10px;
     left: 10px;
     margin: 0;
 }
