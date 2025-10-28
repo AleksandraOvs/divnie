@@ -200,6 +200,16 @@ figure.bradius32,
     flex-direction: inherit;
 }
 
+figure.icon {
+    width: 40px;
+    height: 40px;
+}
+
+figure.icom img {
+    width: 100%;
+    height: 100%;
+}
+
 /*CONTAINER */
 
 .fixed-container {
