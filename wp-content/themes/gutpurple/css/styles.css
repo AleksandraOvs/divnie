@@ -953,4 +953,8 @@ footer.site-footer {
         font-size: 36px;
     }
 
+    .spacer-mob-hidden {
+        height: 2em !important;
+    }
+
 }
