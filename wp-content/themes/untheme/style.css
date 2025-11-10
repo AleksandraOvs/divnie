@@ -848,8 +848,17 @@ ul.menu li .dropdown-menu li a:hover {
 	z-index: 200;
 }
 
-.dropdown-menu li a {
-	border-bottom: 1px solid var(--yellow);
+ul.menu li ul.dropdown-menu li a {
+	border-bottom: 1px solid var(--blue);
+	border-right: 0;
+	text-align: left;
+	transition: all .5s linear;
+}
+
+ul.menu li ul.dropdown-menu li a:hover {
+	border-bottom: 1px solid var(--accent);
+	background: var(--black);
+	transform: scale(1.02);
 }
 
 .dropdown-menu li:last-child {
