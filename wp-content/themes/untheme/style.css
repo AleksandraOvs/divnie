@@ -838,13 +838,13 @@ ul.menu li .dropdown-menu li a:hover {
 	position: absolute;
 	top: 99%;
 	left: 0;
-	background: rgba(var(--black-rgb), .8);
+	background: rgba(var(--dark-rgb), 1);
 	padding: 0;
 	border-radius: 0 0 4px 4px;
 	overflow: hidden;
 	list-style: none;
 	margin: 0;
-	width: max-content;
+	width: 100%;
 	z-index: 200;
 }
 
