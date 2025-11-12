@@ -538,9 +538,13 @@ figure.icom img {
 } */
 
 .wp-block-group.four-slides-slider__slide {
-    overflow: hidden;
+    overflow-y: scroll;
     border-radius: 5px;
     height: 420px;
+}
+
+.four-slides-slider__slide figure {
+    max-height: 200px;
 }
 
 .wp-block-group.four-slides-slider__slide.swiper-slide figure {
