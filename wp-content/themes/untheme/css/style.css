@@ -39,7 +39,7 @@
 }
 
 .wp-block-group.four-slides-slider__slide::-webkit-scrollbar-thumb {
-    background: #666;
+    background: var(--grey);
 }
 
 .reverse {
