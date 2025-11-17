@@ -1369,3 +1369,7 @@ figure.bradius32,
     border-left: 2px solid var(--accent);
     margin: 20px 0;
 }
+
+.oswald {
+    font-family: 'Oswald';
+}
