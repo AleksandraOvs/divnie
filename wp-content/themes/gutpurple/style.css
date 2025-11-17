@@ -780,7 +780,7 @@ ul.menu li .dropdown-menu li a:hover {
 	min-width: 100%;
 }
 
-.dropdown-menu li a {
+ul li ul.dropdown-menu li a {
 	border-bottom: 1px solid var(--yellow);
 	border-right: 0;
 }
