@@ -730,7 +730,7 @@ ul.menu li.menu-item {
 }
 
 ul.menu li:not(:last-child) a {
-	border-right: 1px solid #fff;
+	border-right: 1px solid var(--dark);
 }
 
 ul.menu li a {
@@ -745,11 +745,11 @@ ul.menu li a {
 ul.menu li a:hover {
 	color: #fff;
 	background: var(--dark);
-	border-color: var(--dark);
 }
 
 ul.menu li .dropdown-menu li a:hover {
 	background: transparent;
+	color: var(--blue);
 }
 
 .current-menu-item>a {
