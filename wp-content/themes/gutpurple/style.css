@@ -764,14 +764,15 @@ ul.menu li .dropdown-menu li a:hover {
 	position: absolute;
 	top: 99%;
 	left: 0;
-	background: rgba(0, 0, 0, .5);
+	background: rgba(70, 68, 81, .7);
 	padding: 0;
 	border-radius: 0 0 4px 4px;
 	overflow: hidden;
 	list-style: none;
 	margin: 0;
-	width: max-content;
+	width: 100%;
 	z-index: 200;
+	min-width: 100%;
 }
 
 .dropdown-menu li a {
