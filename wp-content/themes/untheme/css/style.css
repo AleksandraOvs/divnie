@@ -13,13 +13,12 @@
     color: #333333;
 }
 
-/* Тёмный аккуратный скроллбар */
 ::-webkit-scrollbar {
     width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1e1e1e;
+    background: var(--dark);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -28,6 +27,18 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.wp-block-group.four-slides-slider__slide::-webkit-scrollbar {
+    width: 6px;
+}
+
+.wp-block-group.four-slides-slider__slide::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+.wp-block-group.four-slides-slider__slide::-webkit-scrollbar-thumb {
     background: #666;
 }
 
