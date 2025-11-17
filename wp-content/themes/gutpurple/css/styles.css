@@ -911,7 +911,7 @@ footer.site-footer {
 
 @media (max-width: 768px) {
 
-    .grid-3-items {
+    .wp-block-group.grid-3-items {
         grid-template-columns: repeat(2, 1fr);
 
     }
@@ -996,7 +996,7 @@ footer.site-footer {
 }
 
 @media (max-width: 480px) {
-    .grid-3-items {
+    .wp-block-group.grid-3-items {
         grid-template-columns: repeat(1, 1fr);
     }
 }
