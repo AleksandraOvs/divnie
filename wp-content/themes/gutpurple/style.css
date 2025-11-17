@@ -761,11 +761,10 @@ ul.menu li .dropdown-menu li a:hover {
 }
 
 .dropdown-menu {
-	display: none;
 	position: absolute;
 	top: 99%;
 	left: 0;
-	background: rgba(var(--black-rgb), .8);
+	background: rgba(0, 0, 0, .5);
 	padding: 0;
 	border-radius: 0 0 4px 4px;
 	overflow: hidden;
