@@ -782,6 +782,7 @@ ul.menu li .dropdown-menu li a:hover {
 
 .dropdown-menu li a {
 	border-bottom: 1px solid var(--yellow);
+	border-right: 0;
 }
 
 .dropdown-menu li:last-child {
