@@ -1367,7 +1367,7 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 /* Comments
