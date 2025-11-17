@@ -911,6 +911,11 @@ footer.site-footer {
 
 @media (max-width: 768px) {
 
+    .grid-3-items {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
     .wp-block-columns.two-slides-slider,
     .wp-block-columns.four-slides-slider {
         overflow: visible;
@@ -988,4 +993,10 @@ footer.site-footer {
         height: 2em !important;
     }
 
+}
+
+@media (max-width: 480px) {
+    .grid-3-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
