@@ -1124,6 +1124,121 @@ a.menu-toggle.open .bar:nth-child(3) {
 		opacity: 0;
 	}
 
+	nav.header-nav {
+		position: fixed;
+		transform: translateX(100%);
+		opacity: 0;
+		width: 50%;
+		right: 0;
+		height: 100%;
+		top: 0;
+		z-index: 554;
+		background: var(--black);
+		transition: transform .5s ease-in-out, opacity .7s ease-in-out;
+	}
+
+	nav.header-nav.open {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	nav.header-nav .fixed-container {
+		height: 100%;
+		padding: 40px 15px;
+		flex-direction: column;
+		gap: 20px;
+		justify-content: space-between;
+	}
+
+	ul.menu li:not(:last-child) a {
+		border-right: none;
+	}
+
+	nav.header-nav .fixed-container ul {
+		flex-direction: column;
+		width: 100%;
+		background: none;
+	}
+
+	nav.header-nav .fixed-container ul li a {
+		padding: 0;
+		font-size: 18px;
+		width: 100%;
+		font-weight: 400;
+		line-height: 2;
+		display: block;
+		text-decoration: none;
+		text-align: left;
+	}
+
+	.header-nav .fixed-container .contacts-list li.contacts-list__item:not(:last-child)::after {
+		content: '';
+		width: 40px;
+		height: 1px;
+		display: block;
+		position: absolute;
+		top: unset;
+		right: unset;
+		left: 0;
+		bottom: 0;
+		background: var(--yellow);
+	}
+
+	nav.header-nav .fixed-container ul li ul.dropdown-menu li a {
+		border: none;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 0;
+		color: #cacaca;
+		line-height: 2;
+	}
+
+	nav.header-nav .fixed-container ul li ul.dropdown-menu li {
+		padding-left: 10px;
+		position: relative;
+	}
+
+	.header-nav .contacts-list {
+		display: flex;
+		gap: 20px;
+	}
+
+	ul.menu li a:hover {
+		color: var(--yellow);
+		background: transparent;
+	}
+
+	.header-nav .fixed-container .contacts-list li.contacts-list__item:not(:last-child) {
+		padding-right: 0;
+		position: relative;
+	}
+
+	.dropdown-menu {
+		display: block !important;
+		position: relative;
+		top: unset;
+		left: unset;
+		background: rgba(var(--black-rgb), .8);
+		padding: 0;
+		border-radius: 0 0 4px 4px;
+		overflow: hidden;
+		list-style: none;
+		margin: 0;
+		width: max-content;
+		z-index: 200;
+	}
+
+	nav.header-nav .fixed-container ul li ul.dropdown-menu li:before {
+		content: '';
+		position: absolute;
+		width: 3px;
+		height: 3px;
+		background: var(--yellow);
+		left: 0;
+		top: 14px;
+	}
+
+
 }
 
 .site-main .comment-navigation,
