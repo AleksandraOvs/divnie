@@ -12,6 +12,25 @@
     box-sizing: border-box;
 }
 
+/* Минимальный аккуратный скроллбар */
+/* ::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+} */
+
 .show-temp {
     position: fixed;
     z-index: 100;
