@@ -307,6 +307,14 @@ figure.icom img {
     padding: 0;
 }
 
+.wp-block-quote {
+    background: var(--light-grey);
+    padding: 20px;
+    border-radius: 0 5px 5px 0;
+    border-left: 2px solid var(--accent);
+    margin: 20px 0;
+}
+
 :root :where(.wp-block-separator.is-style-dots)::before {
     color: currentColor;
     content: "";
