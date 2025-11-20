@@ -194,6 +194,10 @@ figure.bradius32,
     margin-bottom: 0;
 }
 
+.wp-block-cover {
+    padding: 0;
+}
+
 :where(.wp-block-columns.has-background) {
     padding: 2em;
 }
