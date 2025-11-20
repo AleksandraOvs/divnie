@@ -14,7 +14,8 @@ new Swiper('.hero-slider', {
 });
 
 const twosliderSwiper = new Swiper('.two-slides-slider', {
-  slidesPerView: 1.4, // 2 слайда в ряд
+  slidesPerView: 1, // 2 слайда в ряд
+  centeredSlides: true,
   spaceBetween: 20,
   navigation: {
     nextEl: '.slider__button-next',
@@ -29,6 +30,7 @@ const twosliderSwiper = new Swiper('.two-slides-slider', {
     768: {
       slidesPerView: 2,
       spaceBetween: 40,
+      centeredSlides: false,
     },
   },
 
