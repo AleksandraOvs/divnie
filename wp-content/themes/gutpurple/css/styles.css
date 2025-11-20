@@ -556,7 +556,7 @@ figure.icom img {
 
 .wp-block-columns.four-slides-slider {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 /* 
@@ -802,6 +802,7 @@ footer.site-footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 230px;
 }
 
 .footer-columns__first .custom-logo-link {
