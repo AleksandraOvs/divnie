@@ -492,6 +492,10 @@ figure.icom img {
     transition: all .5s linear;
 }
 
+.slider-section {
+    overflow: hidden;
+}
+
 /*3 slider*/
 
 .wp-block-columns.three-slides-slider {
@@ -936,6 +940,14 @@ footer.site-footer {
     .footer-col {
         order: 3;
     } */
+
+    .slider__button-prev {
+        left: -40px;
+    }
+
+    .slider__button-next {
+        right: -40px;
+    }
 
     .footer-columns {
         display: grid;

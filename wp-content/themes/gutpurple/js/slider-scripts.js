@@ -62,8 +62,9 @@ const threesliderSwiper = new Swiper('.three-slides-slider', {
 });
 
 const foursliderSwiper = new Swiper('.four-slides-slider', {
-  slidesPerView: 1.2,
+  slidesPerView: 1,
   spaceBetween: 20,
+  centeresSlides: true,
   navigation: {
     nextEl: '.slider__button-next',
     prevEl: '.slider__button-prev',
@@ -82,6 +83,7 @@ const foursliderSwiper = new Swiper('.four-slides-slider', {
     768: {
       spaceBetween: 20,
       slidesPerView: 3,
+      centeresSlides: false,
     },
   },
 
