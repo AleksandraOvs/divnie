@@ -946,11 +946,11 @@ footer.site-footer {
     } */
 
     .slider__button-prev {
-        left: 10px;
+        left: -10px;
     }
 
     .slider__button-next {
-        right: 10px;
+        right: -10px;
     }
 
     .footer-columns {
