@@ -1043,4 +1043,12 @@ footer.site-footer {
     .wp-block-group.grid-3-items {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .wp-block-buttons {
+        width: 100%;
+    }
+
+    .wp-block-buttons .wp-block-button {
+        width: 100%;
+    }
 }
