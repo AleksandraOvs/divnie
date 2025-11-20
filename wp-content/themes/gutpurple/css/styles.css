@@ -1026,15 +1026,13 @@ footer.site-footer {
     .spacer-mob-hidden {
         height: 2em !important;
     }
+}
 
+@media (max-width: 480px) {
     .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex {
         grid-template-columns: repeat(1, 1fr);
     }
 
-
-}
-
-@media (max-width: 480px) {
     .wp-block-group.grid-3-items {
         grid-template-columns: repeat(1, 1fr);
     }
