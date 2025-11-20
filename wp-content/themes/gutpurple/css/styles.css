@@ -90,6 +90,11 @@ h2.title {
     text-transform: uppercase;
 }
 
+h4,
+h5 {
+    font-size: 20px;
+}
+
 /* 
 h2.title::first-line {
     color: var(--green);
