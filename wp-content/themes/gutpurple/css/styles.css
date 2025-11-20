@@ -920,6 +920,11 @@ footer.site-footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex .wp-block-column .wp-block-columns {
+        width: 100%;
+        display: block;
+    }
+
     :where(.wp-block-columns.is-layout-flex) {
         gap: 1em;
     }
