@@ -915,6 +915,7 @@ footer.site-footer {
 }
 
 @media (max-width: 992px) {
+
     /* .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -924,16 +925,17 @@ footer.site-footer {
         width: 100%;
         display: block;
     } */
-
-    :where(.wp-block-columns.is-layout-flex) {
+    /* :where(.wp-block-columns.is-layout-flex) {
         gap: 1em;
-    }
+    } */
 }
 
 @media (max-width: 781px) {
     .reverse__mob {
         flex-direction: column-reverse;
     }
+
+
 }
 
 @media (max-width: 768px) {
