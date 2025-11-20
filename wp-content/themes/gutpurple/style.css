@@ -1167,6 +1167,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 		background: rgba(var(--black-rgb), .8);
 		padding: 0;
 		border-radius: 0 0 4px 4px;
+		backdrop-filter: unset;
 		overflow: hidden;
 		list-style: none;
 		margin: 0;
