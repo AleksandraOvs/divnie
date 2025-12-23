@@ -1038,6 +1038,10 @@ footer.site-footer {
         width: 100%;
     }
 
+    .footer-columns__first {
+        max-width: 100%;
+    }
+
 
 }
 
