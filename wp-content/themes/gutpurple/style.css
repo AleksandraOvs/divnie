@@ -97,6 +97,11 @@ body {
  */
 main {
 	display: block;
+	/* padding-top: 162px; */
+}
+
+.page-inner {
+	padding-top: 145px;
 }
 
 /**
