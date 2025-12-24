@@ -101,7 +101,7 @@ main {
 }
 
 .site-main>article .entry-content {
-	padding: 110px 30px 70px 30px;
+	padding: 130px 30px 70px 30px;
 }
 
 .entry-content p {
@@ -1029,7 +1029,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 @media screen and (max-width: 1024px) {
 
 	.site-main>article .entry-content {
-		padding: 70px 30px 70px 30px;
+		padding: 90px 10px 70px 10px;
 	}
 
 	a.menu-toggle {
