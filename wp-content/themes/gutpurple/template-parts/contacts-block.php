@@ -25,7 +25,7 @@ $address_icon = carbon_get_theme_option('crb_address_icon');
 
     <?php
     if (!empty($oh)) {
-        echo '<li class="contacts-list__item">';
+        echo '<li class="contacts-list__item _oh">';
         if (!empty($oh_icon)) {
             $oh_icon_url = wp_get_attachment_image_url($oh_icon, 'full');
 

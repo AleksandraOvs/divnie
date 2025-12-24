@@ -727,6 +727,10 @@ textarea {
 	display: none;
 }
 
+.header-main ._oh {
+	display: none;
+}
+
 ul.menu {
 	display: flex;
 	list-style: none;
