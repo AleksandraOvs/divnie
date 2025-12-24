@@ -40,7 +40,11 @@ $address_icon = carbon_get_theme_option('crb_address_icon');
     if (!empty($contacts)) {
         foreach ($contacts as $contact) {
             $contact_icon_url = wp_get_attachment_image_url($contact['crb_contact_image'], 'full');
-            echo '<li class="contacts-list__item">';
+            $item_class = 'contacts-list__item';
+            if (!empty($contact['crb_contact_hide_header'])) {
+                $item_class .= ' display-none';
+            }
+            echo '<li class="' . esc_attr($item_class) . '">';
             echo '<img class="contacts-list__item__img" src="' . $contact_icon_url . '" />';
             echo '<div class="contact-content">';
             if (!empty($contact['crb_contact_name'])) {

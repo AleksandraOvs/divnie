@@ -26,6 +26,8 @@ function site_carbon()
             Field::make('complex', 'crb_contacts', 'Contacts item')
 
                 ->add_fields(array(
+                    Field::make('checkbox', 'crb_contact_hide_header', 'Скрыть в шапке'),
+
                     Field::make('image', 'crb_contact_image', 'Contact icon')
                         ->set_width(25),
                     Field::make('text', 'crb_contact_name', 'Name of contact')

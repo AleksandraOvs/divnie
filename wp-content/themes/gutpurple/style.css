@@ -723,6 +723,10 @@ textarea {
 	display: none;
 }
 
+.header-main .display-none {
+	display: none;
+}
+
 ul.menu {
 	display: flex;
 	list-style: none;
