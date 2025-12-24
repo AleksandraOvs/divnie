@@ -39,6 +39,7 @@ const twosliderSwiper = new Swiper('.two-slides-slider', {
 const threesliderSwiper = new Swiper('.three-slides-slider', {
   slidesPerView: 1, // 2 слайда в ряд
   spaceBetween: 20,
+  loop: true,
   navigation: {
     nextEl: '.slider__button-next',
     prevEl: '.slider__button-prev',
@@ -53,6 +54,7 @@ const threesliderSwiper = new Swiper('.three-slides-slider', {
     1024: {
       spaceBetween: 20,
       slidesPerView: 3,
+      loop: false
     },
 
     576: {
