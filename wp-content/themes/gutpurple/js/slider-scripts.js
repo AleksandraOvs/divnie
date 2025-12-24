@@ -67,6 +67,7 @@ const foursliderSwiper = new Swiper('.four-slides-slider', {
   slidesPerView: 1,
   spaceBetween: 20,
   centeresSlides: true,
+  loop: true,
   navigation: {
     nextEl: '.slider__button-next',
     prevEl: '.slider__button-prev',

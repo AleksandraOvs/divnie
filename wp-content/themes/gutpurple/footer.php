@@ -95,7 +95,8 @@
 	?>
 
 </footer><!-- #colophon -->
-<?php get_template_part('template-parts/floating-buttons') ?>
+<?php //get_template_part('template-parts/floating-buttons') 
+?>
 
 </div><!-- #page -->
 <div class="arrow-up">
