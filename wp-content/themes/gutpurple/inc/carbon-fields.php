@@ -136,5 +136,7 @@ function site_carbon()
                         'post_type' => 'custom_template',
                     ]
                 ]),
+
+            Field::make('rich_text', 'seo_text', 'SEO текст')
         ]);
 };

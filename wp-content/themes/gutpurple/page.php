@@ -44,6 +44,18 @@ get_header();
 	}
 	?>
 
+	<?php
+	$seo_text = carbon_get_post_meta(get_the_ID(), 'seo_text');
+
+	if (!empty($seo_text)) {
+		echo '<div class="fixed-container">';
+		echo $seo_text;
+		echo '</div>';
+	}
+	?>
+
+
+
 	<!-- </div> -->
 
 
