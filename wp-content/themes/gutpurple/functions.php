@@ -263,6 +263,8 @@ require get_template_directory() . '/inc/post-types.php';
 
 require get_template_directory() . '/inc/carbon-fields.php';
 
+require get_template_directory() . '/inc/load-blocks.php';
+
 /**
  * Load Jetpack compatibility file.
  */
