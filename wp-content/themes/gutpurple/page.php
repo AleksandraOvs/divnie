@@ -27,16 +27,16 @@ get_header();
 		$template_post = get_post($template_id);
 
 		if ($template_post) {
-			echo '<div class="container">';
+
 			echo apply_filters('the_content', $template_post->post_content);
-			echo '</div>';
 		}
 
 		// выводим контент страницы ПОД шаблоном
 		while (have_posts()) :
 			the_post();
-
+			echo '<div class="container">';
 			get_template_part('template-parts/content', 'page');
+			echo '</div>';
 
 			if (comments_open() || get_comments_number()) :
 				comments_template();
