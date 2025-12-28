@@ -22,25 +22,38 @@ get_header();
 	$template_id = carbon_get_the_post_meta('template_page')[0]['id'] ?? null;
 
 	if ($template_id) {
-		// контент шаблона
+
+		// выводим контент шаблона
 		$template_post = get_post($template_id);
+
 		if ($template_post) {
 			echo apply_filters('the_content', $template_post->post_content);
 		}
-	} else {
-		// контент страницы
 
+		// выводим контент страницы ПОД шаблоном
 		while (have_posts()) :
 			the_post();
 
 			get_template_part('template-parts/content', 'page');
 
-			// If comments are open or we have at least one comment, load up the comment template.
 			if (comments_open() || get_comments_number()) :
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
+		endwhile;
+	} else {
+
+		// стандартный режим — только контент страницы
+		while (have_posts()) :
+			the_post();
+
+			get_template_part('template-parts/content', 'page');
+
+			if (comments_open() || get_comments_number()) :
+				comments_template();
+			endif;
+
+		endwhile;
 	}
 	?>
 
