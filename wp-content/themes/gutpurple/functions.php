@@ -265,6 +265,8 @@ require get_template_directory() . '/inc/carbon-fields.php';
 
 require get_template_directory() . '/inc/load-blocks.php';
 
+require get_template_directory() . '/inc/edit-pages.php';
+
 /**
  * Load Jetpack compatibility file.
  */
