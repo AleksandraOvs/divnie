@@ -27,7 +27,9 @@ get_header();
 		$template_post = get_post($template_id);
 
 		if ($template_post) {
+			echo '<div class="container">';
 			echo apply_filters('the_content', $template_post->post_content);
+			echo '</div>';
 		}
 
 		// выводим контент страницы ПОД шаблоном
