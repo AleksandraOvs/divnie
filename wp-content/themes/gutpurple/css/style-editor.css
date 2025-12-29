@@ -1274,9 +1274,10 @@ figure.bradius32,
 }
 
 .swiper.four-slides-slider .wp-block.swiper-wrapper .four-slides-slider__slide>div {
-    position: absolute;
+    width: 100%;
+    /* position: absolute;
     bottom: 20px;
-    width: calc(100% - 40px);
+    width: calc(100% - 40px); */
     /* left: 20px; */
     z-index: 5;
     background: rgba(255, 255, 255, .5);
