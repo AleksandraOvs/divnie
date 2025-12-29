@@ -1071,3 +1071,16 @@ footer.site-footer {
         width: 100%;
     }
 }
+
+.vk-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.vk-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
