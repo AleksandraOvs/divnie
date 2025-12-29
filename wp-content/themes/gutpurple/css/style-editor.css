@@ -1283,7 +1283,7 @@ figure.bradius32,
     background: rgba(255, 255, 255, .5);
 }
 
-.four-slides-slider__slide.review-slide ul li {
+.three-slides-slider__slide.review-slide ul li {
     padding-bottom: 10px;
     font-size: 14px;
 }
