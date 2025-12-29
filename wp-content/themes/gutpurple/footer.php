@@ -100,6 +100,50 @@
 
 <script src="//code.jivo.ru/widget/06WBWEgOHa" async></script>
 
+<!-- Marquiz script start -->
+<script>
+	(function(w, d, s, o) {
+		var j = d.createElement(s);
+		j.async = true;
+		j.src = '//script.marquiz.ru/v2.js';
+		j.onload = function() {
+			if (document.readyState !== 'loading') Marquiz.init(o);
+			else document.addEventListener("DOMContentLoaded", function() {
+				Marquiz.init(o);
+			});
+		};
+		d.head.insertBefore(j, d.head.firstElementChild);
+	})(window, document, 'script', {
+		host: '//quiz.marquiz.ru',
+		region: 'eu',
+		id: '63e3cb14aca009004d50bdfe',
+		autoOpen: 6,
+		autoOpenFreq: 'once',
+		openOnExit: true,
+		disableOnMobile: false
+	});
+</script>
+<!-- Marquiz script end -->
+<div data-marquiz-id="63e3cb14aca009004d50bdfe"></div>
+<script>
+	(function(t, p) {
+		window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {
+			Marquiz.add([t, p])
+		})
+	})('Button', {
+		id: '63e3cb14aca009004d50bdfe',
+		buttonText: 'ЛУЧШАЯ ЦЕНА',
+		bgColor: '#85ace0',
+		textColor: '#ffffff',
+		rounded: true,
+		shadow: 'rgba(133, 172, 224, 0.5)',
+		blicked: true,
+		fixed: 'left'
+	})
+</script>
+<!-- Marquiz script end -->
+
+
 </div><!-- #page -->
 <div class="arrow-up">
 	<svg width="23" height="37" viewBox="0 0 23 37" fill="none" xmlns="http://www.w3.org/2000/svg">
