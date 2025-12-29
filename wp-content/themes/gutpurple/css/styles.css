@@ -518,8 +518,8 @@ figure.icom img {
 }
 
 .wp-block-columns.three-slides-slider .swiper-wrapper {
-    min-height: 430px;
-    height: 430px;
+    min-height: 480px;
+    height: 480px;
     flex-basis: unset !important;
 }
 
