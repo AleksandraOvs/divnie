@@ -98,6 +98,8 @@
 <?php //get_template_part('template-parts/floating-buttons') 
 ?>
 
+<script src="//code.jivo.ru/widget/06WBWEgOHa" async></script>
+
 </div><!-- #page -->
 <div class="arrow-up">
 	<svg width="23" height="37" viewBox="0 0 23 37" fill="none" xmlns="http://www.w3.org/2000/svg">
