@@ -557,6 +557,12 @@ figure.icom img {
     object-position: center;
 }
 
+.three-slides-slider__slide.review-slide ul li {
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+
 /*4 slider*/
 
 .four-slides-slider .swiper-wrapper {
