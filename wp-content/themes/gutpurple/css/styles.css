@@ -558,10 +558,13 @@ figure.icom img {
 }
 
 .three-slides-slider__slide.review-slide ul li {
-    padding-bottom: 10px;
+    padding-bottom: 0;
     font-size: 14px;
 }
 
+.three-slides-slider__slide.review-slide ul {
+    margin-bottom: 20px;
+}
 
 /*4 slider*/
 
