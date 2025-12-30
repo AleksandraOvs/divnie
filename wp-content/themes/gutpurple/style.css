@@ -1116,7 +1116,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 
 	nav.header-nav .fixed-container {
 		height: 100%;
-		padding: 100px 30px 30px;
+		padding: 30px 30px 30px;
 		flex-direction: column;
 		gap: 20px;
 		justify-content: space-between;
