@@ -1099,8 +1099,8 @@ footer.site-footer {
 
     .arrow-up {
         position: fixed;
-        width: 40px;
-        height: 40px;
+        right: 20px;
+        bottom: 100px;
     }
 }
 
