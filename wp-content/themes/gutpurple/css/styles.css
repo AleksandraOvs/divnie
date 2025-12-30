@@ -1033,6 +1033,11 @@ footer.site-footer {
         display: block;
     }
 
+    .contacts-list li.contacts-list__item:not(:last-child) {
+        padding-right: 0;
+        position: relative;
+    }
+
     .widget div .menu li a {
         text-align: center;
     }
