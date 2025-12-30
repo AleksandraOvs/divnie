@@ -20,6 +20,8 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<script src="//code.jivo.ru/widget/06WBWEgOHa"></script>
 </head>
 
 <body <?php body_class(); ?>>
