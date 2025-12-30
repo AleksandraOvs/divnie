@@ -1096,6 +1096,12 @@ footer.site-footer {
     .wp-block-buttons .wp-block-button {
         width: 100%;
     }
+
+    .arrow-up {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .vk-video {
