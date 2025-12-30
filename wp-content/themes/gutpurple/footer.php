@@ -93,12 +93,12 @@
 	<?php
 	}
 	?>
-
+	<script src="//code.jivo.ru/widget/06WBWEgOHa"></script>
 </footer><!-- #colophon -->
 <?php //get_template_part('template-parts/floating-buttons') 
 ?>
 
-<script src="//code.jivo.ru/widget/06WBWEgOHa" async></script>
+
 
 <!-- Marquiz script start -->
 <script>
