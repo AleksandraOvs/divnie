@@ -589,7 +589,7 @@ a.wp-block-button__link {
 
 a.button:hover,
 a.wp-block-button__link:hover {
-	background: var(--dark);
+	background: var(--accent);
 }
 
 
