@@ -687,7 +687,7 @@ textarea {
 --------------------------------------------- */
 .site-branding {
 	width: 200px;
-	height: 40px;
+	height: 70px;
 	transition: all .5s linear;
 }
 
@@ -873,8 +873,8 @@ header.site-header {
 }
 
 .header-main {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background: rgba(var(--dark-rgb), .9);
 	transition: all .5s linear;
 }
