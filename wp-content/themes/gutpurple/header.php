@@ -108,32 +108,36 @@
 
 					</div>
 
-					<?php get_template_part('template-parts/contacts-block') ?>
+					<div class="header-main__right">
+						<?php get_template_part('template-parts/contacts-block') ?>
+						<nav class="header-nav">
 
-					<a href="#" class="menu-toggle" onclick="event.preventDefault();">
-						<div class="bar"></div>
-						<div class="bar"></div>
-						<div class="bar"></div>
-					</a>
-					<!-- </div> -->
+							<?php wp_nav_menu([
+								'container' => false,
+								'theme_location'  => 'main_menu',
+								'walker' => new Main_walker_menu,
+								'depth'           => 2,
+							]); ?>
+
+							<?php get_template_part('template-parts/contacts-block') ?>
+
+
+
+						</nav>
+
+
+
+						<a href="#" class="menu-toggle" onclick="event.preventDefault();">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</a>
+					</div>
 
 				</div>
 			</div>
 
-			<nav class="header-nav">
-				<div class="fixed-container">
-					<?php wp_nav_menu([
-						'container' => false,
-						'theme_location'  => 'main_menu',
-						'walker' => new Main_walker_menu,
-						'depth'           => 2,
-					]); ?>
 
-					<?php get_template_part('template-parts/contacts-block') ?>
-				</div>
-
-
-			</nav>
 
 
 

@@ -910,11 +910,11 @@ footer.site-footer {
 
 
 @media (max-width: 1024px) {
-    .header-main .fixed-container .contacts-list {
+    .header-main__right .header-main .contacts-list {
         display: none;
     }
 
-    .header-nav .contacts-list {
+    .header-main__right .header-nav .contacts-list {
         display: flex;
         gap: 20px;
         flex-direction: column;
