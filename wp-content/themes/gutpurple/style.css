@@ -65,8 +65,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 :root {
 	--black: #000;
-	--dark: #464451;
-	--dark-rgb: 70, 68, 81;
+	--dark: #32373C;
+	--dark-rgb: 50, 55, 60;
 	--accent: #4D70C9;
 	--blue: #A1DEFF;
 	--light-grey: #F5F5F5;
@@ -891,7 +891,7 @@ header.site-header {
 .header-main {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background: rgba(var(--dark-rgb), .9);
+	background: rgba(var(--dark-rgb), .97);
 	transition: all .5s linear;
 }
 
