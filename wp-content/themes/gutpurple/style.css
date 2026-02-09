@@ -799,7 +799,7 @@ ul.menu li .dropdown-menu li a:hover {
 	position: absolute;
 	top: 24px;
 	left: -40px;
-	background: rgba(70, 68, 81, .85);
+	background: rgba(var(--dark-rgb), .97);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	-moz-backdrop-filter: blur(15px);
