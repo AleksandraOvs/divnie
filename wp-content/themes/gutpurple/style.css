@@ -1824,6 +1824,7 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 
 	nav.header-nav .contacts-list li._oh {
 		display: flex;
+		align-items: flex-start;
 	}
 
 	.header-main__right .header-nav .contacts-list {
