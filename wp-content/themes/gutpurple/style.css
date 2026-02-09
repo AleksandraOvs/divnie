@@ -92,6 +92,10 @@ body {
 	margin: 0;
 }
 
+body.home._fixed {
+	overflow: hidden;
+}
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -992,6 +996,7 @@ a.menu-toggle {
 	height: 40px;
 	cursor: pointer;
 	z-index: 555;
+	padding-top: 5px;
 }
 
 a.menu-toggle .bar {
@@ -1808,8 +1813,10 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 
 @media (max-width: 1024px) {
 	.header-main__right {
-		justify-content: center;
-		align-items: flex-end;
+		justify-content: flex-end;
+		flex-direction: row;
+		gap: 20px;
+		align-items: center;
 	}
 
 	nav.header-nav .contacts-list li._oh {
