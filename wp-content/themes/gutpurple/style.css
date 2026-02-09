@@ -815,8 +815,11 @@ ul.menu li .dropdown-menu li a:hover {
 }
 
 ul li ul.dropdown-menu li a {
-	border-bottom: 1px solid var(--yellow);
+	border-bottom: 1px solid #303030;
 	border-right: 0;
+	font-family: 'Open Sans';
+	text-transform: none;
+	line-height: 2;
 }
 
 .dropdown-menu li:last-child {
