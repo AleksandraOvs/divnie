@@ -47,9 +47,9 @@ $address_icon = carbon_get_theme_option('crb_address_icon');
             echo '<li class="' . esc_attr($item_class) . '">';
             echo '<img class="contacts-list__item__img" src="' . $contact_icon_url . '" />';
             echo '<div class="contact-content">';
-            // if (!empty($contact['crb_contact_name'])) {
-            //     echo '<p>' . $contact['crb_contact_name'] . ': </p>';
-            // }
+            if (!empty($contact['crb_contact_name'])) {
+                echo '<p>' . $contact['crb_contact_name'] . ': </p>';
+            }
             echo '<a class="contact-link" href="' . $contact['crb_contact_link'] . '">' . $contact['crb_contact_link_text'] . '</a>';
             echo '</div>';
 
