@@ -105,7 +105,7 @@ main {
 }
 
 .site-main>article .entry-content {
-	padding: 130px 30px 70px 30px;
+	padding: 100px 30px 70px 30px;
 }
 
 .entry-content p {
@@ -1039,7 +1039,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 @media screen and (max-width: 1024px) {
 
 	.site-main>article .entry-content {
-		padding: 90px 10px 70px 10px;
+		padding: 95px 10px 70px 10px;
 	}
 
 	a.menu-toggle {
@@ -1851,9 +1851,17 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 		width: 90%;
 	}
 
+	.site-main>article .entry-content {
+		padding: 85px 10px 70px 10px;
+	}
+
 }
 
 @media (max-width: 576px) {
+	.site-main>article .entry-content {
+		padding: 55px 10px 70px 10px;
+	}
+
 	.site-branding {
 		width: 180px;
 		height: 50px;
