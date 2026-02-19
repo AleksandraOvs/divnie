@@ -729,8 +729,10 @@ textarea {
 .header-main__right {
 	width: calc(100% - 270px);
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
 }
 
 .header-nav .contacts-list {
@@ -1814,6 +1816,15 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 
 	ul.menu li a {
 		font-size: 14px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.header-main__right {
+		flex-direction: column-reverse;
+		align-items: flex-end;
+		gap: 0;
+		justify-content: space-between;
 	}
 }
 
