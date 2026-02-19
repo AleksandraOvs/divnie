@@ -1852,3 +1852,38 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 	}
 
 }
+
+@media (max-width: 576px) {
+	.header-main__right .contacts-list .contacts-list__item {
+		height: 40px;
+		width: 40px;
+	}
+
+	.header-main__right .contacts-list .contacts-list__item .contact-content {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		left: 0;
+	}
+
+	.header-main__right .contacts-list .contacts-list__item .contact-content a {
+		font-size: 1px;
+		opacity: 0;
+	}
+
+	.header-main__right .contacts-list .contacts-list__item {
+		height: 40px;
+		width: 40px;
+		border: 2px solid var(--blue);
+		border-radius: 3px;
+		padding: 5px;
+	}
+
+	.header-main__right .contacts-list .contacts-list__item img {
+		width: 30px;
+		height: 30px;
+		object-fit: contain;
+		object-position: center;
+	}
+}
