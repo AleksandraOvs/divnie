@@ -109,7 +109,7 @@
 					</div>
 
 					<div class="header-main__right">
-						<?php get_template_part('template-parts/contacts-block') ?>
+
 						<nav class="header-nav">
 
 							<?php wp_nav_menu([
@@ -124,7 +124,7 @@
 
 
 						</nav>
-
+						<?php get_template_part('template-parts/contacts-block') ?>
 
 
 						<a href="#" class="menu-toggle" onclick="event.preventDefault();">
