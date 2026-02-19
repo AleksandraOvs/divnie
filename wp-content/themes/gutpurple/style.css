@@ -1854,6 +1854,11 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 }
 
 @media (max-width: 576px) {
+	.site-branding {
+		width: 180px;
+		height: 50px;
+	}
+
 	.header-main__right .contacts-list .contacts-list__item {
 		height: 40px;
 		width: 40px;
