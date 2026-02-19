@@ -691,7 +691,7 @@ textarea {
 --------------------------------------------- */
 .site-branding {
 	width: 260px;
-	height: 70px;
+	height: 78px;
 	transition: all .5s linear;
 }
 
@@ -1804,8 +1804,8 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 
 @media (max-width: 1400px) {
 	.site-branding {
-		width: 210px;
-		height: 55px;
+		width: 230px;
+		height: 78px;
 		transition: all .5s linear;
 	}
 
