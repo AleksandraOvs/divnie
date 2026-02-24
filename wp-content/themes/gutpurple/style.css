@@ -780,7 +780,7 @@ ul.menu li a {
 }
 
 ul.menu li a:hover {
-	color: #fff;
+	color: var(--blue);
 }
 
 ul.menu li .dropdown-menu li a:hover {
